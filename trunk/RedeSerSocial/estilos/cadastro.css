@@ -1,17 +1,17 @@
 *{margin: 0; padding: 0;}
 
-body{font-size: 62.5%; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333;}
+body{background-color:#ededed; font-size: 62.5%; font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; color:#333;}
 
 ul{list-style: none;}
 
 .cAlign{min-width: 240px;max-width: 1200px; width: 98%; margin: 0 auto;}
 
-div#topo{}
+div#topo{background: #dddddd; padding:0.3em 0;}
 
-div#content{}
+div#content{background: #ededed;}
 
-div#left{}
+div#left{display: none;}
 
-div#formulario{}
+div#formulario{ padding: 1em; background: #FFF; box-shadow: inset 0 0 0.8em #ccc; border-radius: 0.5em}
 
-div#footer{}
+div#footer{background: #2b9fe5;}
