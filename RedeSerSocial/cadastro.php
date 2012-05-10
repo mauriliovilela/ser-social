@@ -11,7 +11,7 @@
         <!--Início do Topo-->
         <div id="topo">
             <div class="cAlign">
-                <a href="#" <img src="images/logo.png" alt="Ser Social"/></a> <span> <a href="http://www.joaquimnabuco.edu.br/" target="_blank">Faculdade Joaquim Nabuco</a> </span>
+                <a href="#" > <img src="images/logo.png" alt="Ser Social"> </a> <span> <a href="http://www.joaquimnabuco.edu.br/" target="_blank">Faculdade Joaquim Nabuco</a> </span>
             </div>
         </div>
         <!--Fim do Topo-->
@@ -34,7 +34,7 @@
 
                 <!-- Início do Formulário-->
                 <div id="formulario">
-                    <form name="cadastro" method="post" action="">
+                    <form name="cadastro" method="post" action="cadastrar.php">
                         <div>
                             <div class="inputFloat">
                                 <span>Nome</span>
