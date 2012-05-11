@@ -6,10 +6,10 @@ ul{list-style: none;}
 
 .cAlign{min-width: 240px;max-width: 1200px; width: 95%; margin: 0 auto; text-align: center;}
 
-div#topo{background: #dddddd; padding:0.3em 0; overflow: hidden;}
+div#topo{background: #2b9fe5; padding:0.3em 0; overflow: hidden;}
 div#topo img{float: left;}
 div#topo span{float: right;}
-div#topo span a{margin-right: 2px; padding: 0.5em 0.5em; background: #2b9fe5;color: #fff}
+div#topo span a{margin-right: 2px; padding: 0.5em 0.5em; background: #ac208d;color: #fff}
 div#content{clear: both; overflow: hidden; background: #ededed; margin: 1em 0;}
 div#content h1{font-size: 1.5em; margin-bottom: 0.6em; margin-top: 0.6em;}
 div#left{display: none;}
