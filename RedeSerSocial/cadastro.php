@@ -18,19 +18,7 @@
         <div class="cAlign">
             <!--Início do Conteúdo-->
             <div id="content">
-
-                <!-- Início do Conteúdo da Esquerda
-
-                <div id="left">   
-                    <ul>
-                        <li>Sexo</li>
-                        <li>Data de Nascimento</li>
-                        <li>E-mail</li>
-                        <li>Senha</li>
-                        <li>Verificação contra fraudes</li>
-                    </ul>
-
-                </div><!-- Fim do Conteúdo da Esquerda-->
+              
                 <h1>Cadastre-se!</h1>
                 <!-- Início do Formulário-->
                 <div id="formulario">
@@ -65,17 +53,17 @@
                         <select name="dia">
                             <?php
                             //Neste for, enquanto a variável $dia for menor ou igual a 31 ocorre um incremento.
-                            for ($dia = 1; $dia <= 31; $dia++) {
+                            for ($d = 1; $d <= 31; $d++) {
                                 //Aqui será acrescentado o zero nos dias 1º até o 9º.
                                 //Se o dia for menor que 10, a variável $zero recebe 0, senão recebe uma string vazia.
-                                if ($dia < 10) {
+                                if ($d < 10) {
                                     $zero = 0;
                                 }
                                 else
                                     $zero = '';
                                 // $zero = ($dia < 10) ? 0 : ''; Usando o ternário                                // 
                                 //No valor do select será concatenado a variável $zero com a variavel $dia
-                                echo '<option value="', $zero, $dia, '">', $zero, $dia, ' &nbsp;</option>';
+                                echo '<option value="', $zero, $d, '">', $zero, $d, ' &nbsp;</option>';
                             }
                             ?>
                         </select>
