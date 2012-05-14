@@ -52,6 +52,6 @@ div#footer{clear: both; margin: 4em 0 1em; text-align: center; font-size: 1.1em;
     div#content{margin: 2 2;}
     div#content h1{overflow: hidden; margin-left: 3em;  visibility: hidden;}
     div#topo{margin:auto;}
-    div#formulario{ float: left; width: 75%; background: #fff right url(../images/ser.png) no-repeat;}
+    div#formulario{ float: left; width: 75%;}
 
 }
