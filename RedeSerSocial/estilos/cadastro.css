@@ -45,9 +45,13 @@ div#footer{clear: both; margin: 4em 0 1em; text-align: center; font-size: 1.1em;
     div#left ul li:last-child{border: none;}
     .inputFloat{float: left; width: 220px;}
     .captchaFloat{float: left;width: 210px}
-    .spanHide{visibility: hidden;}
+
 }
 
 @media screen and (min-width: 997px){
-    div#content{margin: 0 6em;}
+    div#content{margin: 2 2;}
+    div#content h1{overflow: hidden; margin-left: 3em;  visibility: hidden;}
+    div#topo{margin:auto;}
+    div#formulario{ float: left; width: 75%; background: #fff right url(../images/ser.png) no-repeat;}
+
 }
