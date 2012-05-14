@@ -10,7 +10,7 @@
         <!--Início do Topo-->
         <div id="topo">
             <div class="cAlign">
-                <a href="http://www.joaquimnabuco.edu.br/" > <img src="images/logo.png" alt="Ser Social"> </a>  <span><a href="http://www.joaquimnabuco.edu.br/" >Joaquim Nabuco</a> </span><span><a href="http://www.joaquimnabuco.edu.br/" >Facebook</a> </span> <span><a href="http://www.joaquimnabuco.edu.br/" >Google</a> </span></div>
+                <a href="http://www.joaquimnabuco.edu.br/" > <img src="images/logo.png" alt="Ser Social"> </a>  <!--<span><a href="http://www.joaquimnabuco.edu.br/" >Joaquim Nabuco</a> </span><span><a href="http://www.joaquimnabuco.edu.br/" >Facebook</a> </span> <span><a href="http://www.mauriciodenassau.edu.br/" >Faculdade Maurício de Nassau</a> </span>--></div>
         </div>
         <!--Fim do Topo-->
 
@@ -19,7 +19,7 @@
             <!--Início do Conteúdo-->
             <div id="content">
 
-                <!-- Início do Conteúdo da Esquerda-->
+                <!-- Início do Conteúdo da Esquerda
 
                 <div id="left">   
                     <ul>
@@ -45,7 +45,7 @@
                                 <span>Sobrenome</span>
                                 <input type="text" name="sobrenome" class="inputTxt"/>                                
                             </div>
-                            
+
                             <div class="inputFloat">
                                 <span>Matrícula</span>
                                 <input type="text" name="matricula" class="inputTxt"/>                                
@@ -53,14 +53,22 @@
 
                         </div>
 
-                        <span class="spanHide">Sexo</span>
+                        <span class="spanHide">Eu sou</span>
                         <select name="sexo">
-                            <option value="">Escolha seu sexo</option>
+                            <option value="homem">Homem&nbsp;</option>
+                            <option value="mulher">Mulher&nbsp;</option>
+                            <option value="travesti">Travesti&nbsp;</option>
+                            <option value="Sapatão">Sapatão&nbsp;</option>
                         </select>
 
                         <span class="spanHide">Data de nascimento</span>
                         <select name="dia">
-                            <option value="">Dia:</option>
+                            <?php
+                            for ($dia = 1; $dia <= 31; $dia++) {
+                                $zero = ($dia < 10) ? 0 : '';
+                                echo '<option value="', $zero, $dia, '">', $zero, $dia, ' &nbsp;</option>';
+                            }
+                            ?>
                         </select>
 
                         <select name="mes">
@@ -95,10 +103,11 @@
             </div><!-- Fim do Conteúdo-->
 
         </div><!--Fim do cAlign-->
-        
+
         <!--Início do Rodapé-->
         <div id="footer">
             <p>&COPY; Copyright - <a href="#" target="_blank">Ser Social 2012</a> - Todos os Direitos Reservados</p>
+            <p><a href="#" target="_blank">Sobre</a> - <a href="#" target="_blank">Desenvolvedores</a> · <a href="#" target="_blank">Privacidade</a> · <a href="#" target="_blank">Termos</a> · <a href="#" target="_blank">Ajuda</a>
         </div><!--Fim do Rodapé-->
     </body>
 
