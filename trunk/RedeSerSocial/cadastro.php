@@ -81,7 +81,16 @@
                         </select>
 
                         <select name="mes">
-                            <option value="">Mês:</option>
+                            <?php
+                            //$Array com os meses do ano.
+                            $meses = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+                            //Neste for, enquanto a variável $m for menor ou igual a 12 ocorre um incremento.
+                            for ($m = 1; $m <= 12; $m++) {
+                                
+                                $zero = ($m < 10) ? 0 : '';
+                                echo '<option value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
+                            }
+                            ?>
                         </select>
 
                         <select name="ano">
