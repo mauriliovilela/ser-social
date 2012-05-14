@@ -86,7 +86,6 @@
                             $meses = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
                             //Neste for, enquanto a variável $m for menor ou igual a 12 ocorre um incremento.
                             for ($m = 1; $m <= 12; $m++) {
-                                
                                 $zero = ($m < 10) ? 0 : '';
                                 echo '<option value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
                             }
@@ -94,7 +93,13 @@
                         </select>
 
                         <select name="ano">
-                            <option value="">Ano:</option>
+                            <?php
+                            //Pega o ano atual(2012) e decrementa até 100 anos
+                            for ($a = date('Y'); $a >= (date('Y') - 100); $a--) {
+                                echo '<option value="', $a, '">', $a, '</option>';
+                            }
+                            ?>
+
                         </select>
 
                         <span class="spanHide">E-mail</span>
@@ -105,7 +110,7 @@
 
                         <span class="spanHide">Verificação contra fraudes</span>
                         <div>
-                            <div class="captchaFloat"><img src="#" width="200" height="60" alt="Captcha">
+                            <div class="captchaFloat"><img src="captcha/captcha.php" width="200" height="60" alt="Captcha">
                             </div>
 
                             <div class="inputFloat">
