@@ -29,40 +29,31 @@ Redes Sociais Web são aplicações que tem como objetivo aumentar a interação
 ==*3. Requisitos funcionais*==
 
 *[RF001] Gerenciar Acesso do Visitante*<br>
-*Descrição:* Este requisito consiste em funcionalidades de acesso do visitante, possibilitando que o visitante possa fazer seu cadastro no sistema, solicitar que o sistema lembre sua senha e a sua identificação.<br>
-*Prioridade:* Essencial<br><br>
+<br><br>
 
 *[RF002] Gerenciar Acesso do Usuário*<br>
-*Descrição:* Este requisito consiste em funcionalidades de acesso do usuário, possibilitando que o usuário possa fazer alteração de dados de acesso e encerramento da sessão no sistema (Logoff).<br>
-*Prioridade:* Essencial<br><br>
+<br><br>
 
 *[RF003] Gerenciar Amigos do Usuário*
-*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de amigos, possibilitando que o usuário possa fazer a exclusão, edição e a visualização de amigos.<br>
-*Prioridade:* Importante<br><br>
+<br><br>
 
 *[RF004] Gerenciar Recados do Usuário*
-*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de recados, possibilitando que o usuário possa fazer o cadastro, exclusão e visualização de recados. <br>
-*Prioridade:* Importante<br><br>
+<br><br>
 
 *[RF005] Gerenciar Convites do Usuário*
-*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de convites, possibilitando que o usuário possa fazer a aceitação, envio, exclusão e visualização de convites. É importante ressaltar que é através de convites de amizade que é criado um vínculo entre dois usuários.<br>
-*Prioridade:* Essencial<br><br>
+<br><br>
 
 *[RF006] Gerenciar Álbuns do Usuário*
-Descrição: Este requisito consiste em funcionalidades de gerenciamento de álbuns, possibilitando que o usuário possa fazer a criação, edição e exclusão de álbuns.<br>
-*Prioridade:* Importante<br><br>
+<br><br>
 
 *[RF007] Gerenciar Fotos do Usuário*
-Descrição: Este requisito consiste em funcionalidades de gerenciamento de fotos, possibilitando que o usuário possa fazer o cadastro, edição, exclusão e visualização de fotos.<br>
-*Prioridade:* Importante
+<br><br>
 
 *[RF008] Gerenciar Perfil do Usuário*
-Descrição: Este requisito consiste em funcionalidades de gerenciamento de perfil, possibilitando que o usuário possa fazer edição e exclusão da sua própria página de perfil.<br>
-*Prioridade:* Essencial<br><br>
+<br><br>
 
 *[RF009] Gerenciar Comentários nas Fotos do Usuário*
-*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de comentários em fotos, possibilitando que o usuário possa fazer o envio, exclusão e visualização de comentários nas fotos.<br>
-*Prioridade:* Importante<br><br>
+<br><br>
 
 ==*4. Requisitos não-funcionais*==
 
