@@ -28,47 +28,38 @@ Redes Sociais Web são aplicações que tem como objetivo aumentar a interação
 
 ==*3. Requisitos funcionais*==
 
-*[RF001] Gerenciar Acesso do Visitante*<br>
-<br><br>
+ * *[RF001] Gerenciar Acesso do Visitante*
 
-*[RF002] Gerenciar Acesso do Usuário*<br>
-<br><br>
+ * *[RF002] Gerenciar Acesso do Usuário*
 
-*[RF003] Gerenciar Amigos do Usuário*
-<br><br>
+ * *[RF003] Gerenciar Amigos do Usuário*
 
-*[RF004] Gerenciar Recados do Usuário*
-<br><br>
+ * *[RF004] Gerenciar Recados do Usuário*
 
-*[RF005] Gerenciar Convites do Usuário*
-<br><br>
+ * *[RF005] Gerenciar Convites do Usuário*
 
-*[RF006] Gerenciar Álbuns do Usuário*
-<br><br>
+ * *[RF006] Gerenciar Álbuns do Usuário*
 
-*[RF007] Gerenciar Fotos do Usuário*
-<br><br>
+ * *[RF007] Gerenciar Fotos do Usuário*
 
-*[RF008] Gerenciar Perfil do Usuário*
-<br><br>
+ * *[RF008] Gerenciar Perfil do Usuário*
 
-*[RF009] Gerenciar Comentários nas Fotos do Usuário*
-<br><br>
+ * *[RF009] Gerenciar Comentários nas Fotos do Usuário*
+
 
 ==*4. Requisitos não-funcionais*==
 
-*[NF001] Usabilidade*
-O sistema deve apresentar uma simples e intuitiva interface, contando com menus de fácil navegação.<br><br>
-*[NF002] Desempenho*
-O sistema deve ser implementado de forma que suporte um elevado número de acessos, contando com garantia de um baixo tempo de acesso para todos seus usuários. <br><br>
-*[NF003] Portabilidade*
-O sistema deve ser implementado de forma que possa ser visualizado em computadores, tablets e smartphone. <br><br>
-*[NF004] Segurança*
-O sistema deve ser implementado com garantia de segurança e integridade dos dados, contando com autenticidade dos conteúdos nele produzidos por seus autores.
+ * *[NF001] Usabilidade*
+
+ * *[NF002] Desempenho*
+
+ * *[NF003] Portabilidade*
+
+ * *[NF004] Segurança*
 
 ==*5. Referências*==
-1. Furlan, J. D. Modelagem de Objetos através da UML. São Paulo, Makron Books, 1998.<br>
-2. Brett Mclaughlin Gary Pollice David West, Use a Cabeça! Análise e Projeto Orientado ao Objeto. São Paulo, Alta Books, 2007<br>
-3. Página de ajuda da Rede Social Facebook: https://www.facebook.com/help/basics.<br>
-4. Página de ajuda da Rede Social Orkut: http://support.google.com/orkut/?hl=pt-BR<br>
-5. Página da disciplina Metodologia e Desenvolvimento de Software: www.cin.ufpe.br/~mds.<br>
+ # Furlan, J. D. Modelagem de Objetos através da UML. São Paulo, Makron Books, 1998.
+ # Brett Mclaughlin Gary Pollice David West, Use a Cabeça! Análise e Projeto Orientado ao Objeto. São Paulo, Alta Books, 2007
+ # Página de ajuda da Rede Social Facebook: https://www.facebook.com/help/basics.
+ # Página de ajuda da Rede Social Orkut: http://support.google.com/orkut/?hl=pt-BR<
+ # Página da disciplina Metodologia e Desenvolvimento de Software: www.cin.ufpe.br/~mds.
