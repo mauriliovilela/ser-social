@@ -1,5 +1,36 @@
+#labels Phase-Implementation
 = Casos de Uso =
 
  * *[UC001] – Efetuar Login*
-
  * *[UC002] – Lembrar Senha*
+ * *[UC003] – Cadastrar-se*
+ * *[UC004] – Editar Perfil*
+ * *[UC005] – Buscar Pessoas*
+ * *[UC006] – Adicionar Álbum*
+ * *[UC007] – Editar Álbum*
+ * *[UC008] – Excluir Álbum*
+ * *[UC009] – Enviar Recado Público*
+ * *[UC010] – Responder Recado Público*
+ * *[UC011] – Visualizar Recado Público*
+ * *[UC012] – Excluir Recado Público*
+ * *[UC013] – Enviar Recado Privado*
+ * *[UC014] – Responder Recado Privado*
+ * *[UC015] – Visualizar Recado Privado*
+ * *[UC016] – Excluir Recado Privado*
+ * *[UC017] – Excluir Recado Privado*
+ * *[UC018] – Visualizar Foto*
+ * *[UC019] – Adicionar Foto*
+ * *[UC020] – Editar Foto*
+ * *[UC021] – Excluir Foto*
+ * *[UC022] – Visualizar Convites*
+ * *[UC023] – Excluir Convites*
+ * *[UC024] – Aceitar Convite*
+ * *[UC025] – Enviar Convite*
+ * *[UC026] – Adicionar Comentário*
+ * *[UC027] – Visualizar Comentários*
+ * *[UC028] – Excluir Comentário*
+ * *[UC029] – Editar Amigo*
+ * *[UC030] – Visualizar Amigos*
+ * *[UC031] – Excluir Amigo*
+ * *[UC032] – Efetuar Logoff*
+ * *[UC033] – Alterar Dados de Acesso*
