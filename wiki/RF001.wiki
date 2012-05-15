@@ -1,0 +1,3 @@
+==RF001 Gerenciar Acesso do Visitante==
+*Descrição:* Este requisito consiste em funcionalidades de acesso do visitante, possibilitando que o visitante possa fazer seu cadastro no sistema, solicitar que o sistema lembre sua senha e a sua identificação.
+*Prioridade:* Essencial
