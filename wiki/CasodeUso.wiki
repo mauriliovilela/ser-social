@@ -25,3 +25,27 @@ Este caso de uso demonstra os passos do ator para identificar-se. Para tanto, o 
 
  # O sistema exibe a MSG “Login ou Senha incorretos”.
  # Volta para o passo 2 do fluxo principal.
+
+==UC002 – Lembrar Senha==
+Este caso de uso demonstra os passos do ator para lembrar senha. Para tanto, o ator deve estar na página inicial do sistema, para que possa ser acessada a página de lembrete. Já na página de lembrete, o ator preenche o formulário e submete os dados para que o sistema, por sua vez, faça operação de seleção no banco de dados.
+
+*Ator:* Visitante.<br>
+*Prioridade:* Importante<br>
+*Requisitos Funcionais Associados:* [RF001] Gerenciar Acesso do Visitante.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* Nenhuma.<br>
+*Pós-condição:* Ator deve receber em seu e-mail a senha para acesso ao sistema.<br><br>
+*Fluxo de eventos principal*
+ # O ator acessa a página inicial do sistema.
+ # O sistema retorna a página inicial.
+ # O ator seleciona a opção de lembrete de senha.
+ # O sistema exibe a página contendo o formulário de lembrete de senha.
+ # O ator preenche o formulário e submete os dados.
+ # O sistema executa a ação e envia um e-mail com a senha.
+ # O caso de uso é encerrado
+
+*Fluxos de exceções*<br><br>
+
+*Fluxo de Exceção [FE002-1] – O dados preenchidos inválidos*
+ # O sistema informa a MSG “Dados incorretos”.
+ # Volta para o passo 4 do fluxo principal. 
