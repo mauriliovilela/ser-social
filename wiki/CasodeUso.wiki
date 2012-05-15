@@ -2,7 +2,7 @@
 
 = Descrição dos Casos de Uso =
 
-==*UC001 – Efetuar Login*==
+==*[UC001] – Efetuar Login*==
 Este caso de uso demonstra os passos do ator para identificar-se. Para tanto, o ator deve estar na página inicial do sistema, para que possa ter acesso ao formulário de login. O ator preenche o formulário e submete os dados para que o sistema, por sua vez, faça operação de seleção no banco de dados.
 
 *Ator:* Visitante<br>
@@ -26,7 +26,7 @@ Este caso de uso demonstra os passos do ator para identificar-se. Para tanto, o 
  # O sistema exibe a MSG “Login ou Senha incorretos”.
  # Volta para o passo 2 do fluxo principal.
 
-==UC002 – Lembrar Senha==
+==[UC002] – Lembrar Senha==
 Este caso de uso demonstra os passos do ator para lembrar senha. Para tanto, o ator deve estar na página inicial do sistema, para que possa ser acessada a página de lembrete. Já na página de lembrete, o ator preenche o formulário e submete os dados para que o sistema, por sua vez, faça operação de seleção no banco de dados.
 
 *Ator:* Visitante.<br>
