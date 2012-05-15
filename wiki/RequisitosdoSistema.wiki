@@ -36,3 +36,48 @@ Redes Sociais Web são aplicações que tem como objetivo aumentar a interação
 *Descrição:* Este requisito consiste em funcionalidades de acesso do usuário, possibilitando que o usuário possa fazer alteração de dados de acesso e encerramento da sessão no sistema (Logoff).<br>
 *Prioridade:* Essencial<br><br>
 
+*[RF003] Gerenciar Amigos do Usuário*
+*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de amigos, possibilitando que o usuário possa fazer a exclusão, edição e a visualização de amigos.<br>
+*Prioridade:* Importante<br><br>
+
+*[RF004] Gerenciar Recados do Usuário*
+*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de recados, possibilitando que o usuário possa fazer o cadastro, exclusão e visualização de recados. <br>
+*Prioridade:* Importante<br><br>
+
+*[RF005] Gerenciar Convites do Usuário*
+*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de convites, possibilitando que o usuário possa fazer a aceitação, envio, exclusão e visualização de convites. É importante ressaltar que é através de convites de amizade que é criado um vínculo entre dois usuários.<br>
+*Prioridade:* Essencial<br><br>
+
+*[RF006] Gerenciar Álbuns do Usuário*
+Descrição: Este requisito consiste em funcionalidades de gerenciamento de álbuns, possibilitando que o usuário possa fazer a criação, edição e exclusão de álbuns.<br>
+*Prioridade:* Importante<br><br>
+
+*[RF007] Gerenciar Fotos do Usuário*
+Descrição: Este requisito consiste em funcionalidades de gerenciamento de fotos, possibilitando que o usuário possa fazer o cadastro, edição, exclusão e visualização de fotos.<br>
+*Prioridade:* Importante
+
+*[RF008] Gerenciar Perfil do Usuário*
+Descrição: Este requisito consiste em funcionalidades de gerenciamento de perfil, possibilitando que o usuário possa fazer edição e exclusão da sua própria página de perfil.<br>
+*Prioridade:* Essencial<br><br>
+
+*[RF009] Gerenciar Comentários nas Fotos do Usuário*
+*Descrição:* Este requisito consiste em funcionalidades de gerenciamento de comentários em fotos, possibilitando que o usuário possa fazer o envio, exclusão e visualização de comentários nas fotos.<br>
+*Prioridade:* Importante<br><br>
+
+==*4. Requisitos não-funcionais*==
+
+*[NF001] Usabilidade*
+O sistema deve apresentar uma simples e intuitiva interface, contando com menus de fácil navegação.<br><br>
+*[NF002] Desempenho*
+O sistema deve ser implementado de forma que suporte um elevado número de acessos, contando com garantia de um baixo tempo de acesso para todos seus usuários. <br><br>
+*[NF003] Portabilidade*
+O sistema deve ser implementado de forma que possa ser visualizado em computadores, tablets e smartphone. <br><br>
+*[NF004] Segurança*
+O sistema deve ser implementado com garantia de segurança e integridade dos dados, contando com autenticidade dos conteúdos nele produzidos por seus autores.
+
+==*5. Referências*==
+1. Furlan, J. D. Modelagem de Objetos através da UML. São Paulo, Makron Books, 1998.<br>
+2. Brett Mclaughlin Gary Pollice David West, Use a Cabeça! Análise e Projeto Orientado ao Objeto. São Paulo, Alta Books, 2007<br>
+3. Página de ajuda da Rede Social Facebook: https://www.facebook.com/help/basics.<br>
+4. Página de ajuda da Rede Social Orkut: http://support.google.com/orkut/?hl=pt-BR<br>
+5. Página da disciplina Metodologia e Desenvolvimento de Software: www.cin.ufpe.br/~mds.<br>
