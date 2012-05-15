@@ -18,19 +18,7 @@
         <div class="cAlign">
             <!--Início do Conteúdo-->
             <div id="content">
-
-                <!-- Início do Conteúdo da Esquerda
-
-                <div id="left">   
-                    <ul>
-                        <li>Sexo</li>
-                        <li>Data de Nascimento</li>
-                        <li>E-mail</li>
-                        <li>Senha</li>
-                        <li>Verificação contra fraudes</li>
-                    </ul>
-
-                </div><!-- Fim do Conteúdo da Esquerda-->
+              
                 <h1>Cadastre-se!</h1>
                 <!-- Início do Formulário-->
                 <div id="formulario">
@@ -64,19 +52,42 @@
                         <span class="spanHide">Data de nascimento</span>
                         <select name="dia">
                             <?php
-                            for ($dia = 1; $dia <= 31; $dia++) {
-                                $zero = ($dia < 10) ? 0 : '';
-                                echo '<option value="', $zero, $dia, '">', $zero, $dia, ' &nbsp;</option>';
+                            //Neste for, enquanto a variável $dia for menor ou igual a 31 ocorre um incremento.
+                            for ($d = 1; $d <= 31; $d++) {
+                                //Aqui será acrescentado o zero nos dias 1º até o 9º.
+                                //Se o dia for menor que 10, a variável $zero recebe 0, senão recebe uma string vazia.
+                                if ($d < 10) {
+                                    $zero = 0;
+                                }
+                                else
+                                    $zero = '';
+                                // $zero = ($dia < 10) ? 0 : ''; Usando o ternário                                // 
+                                //No valor do select será concatenado a variável $zero com a variavel $dia
+                                echo '<option value="', $zero, $d, '">', $zero, $d, ' &nbsp;</option>';
                             }
                             ?>
                         </select>
 
                         <select name="mes">
-                            <option value="">Mês:</option>
+                            <?php
+                            //$Array com os meses do ano.
+                            $meses = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+                            //Neste for, enquanto a variável $m for menor ou igual a 12 ocorre um incremento.
+                            for ($m = 1; $m <= 12; $m++) {
+                                $zero = ($m < 10) ? 0 : '';
+                                echo '<option value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
+                            }
+                            ?>
                         </select>
 
                         <select name="ano">
-                            <option value="">Ano:</option>
+                            <?php
+                            //Pega o ano atual(2012) e decrementa até 100 anos
+                            for ($a = date('Y'); $a >= (date('Y') - 100); $a--) {
+                                echo '<option value="', $a, '">', $a, '</option>';
+                            }
+                            ?>
+
                         </select>
 
                         <span class="spanHide">E-mail</span>
@@ -87,7 +98,7 @@
 
                         <span class="spanHide">Verificação contra fraudes</span>
                         <div>
-                            <div class="captchaFloat"><img src="#" width="200" height="60" alt="Captcha">
+                            <div class="captchaFloat"><img src="captcha/captcha.php" width="200" height="60" alt="Captcha">
                             </div>
 
                             <div class="inputFloat">
