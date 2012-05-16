@@ -1,4 +1,4 @@
-==RF008 Gerenciar Perfil do Usuário==
+==RF008 - Gerenciar Perfil do Usuário==
 *Descrição:* Este requisito consiste em funcionalidades de gerenciamento de perfil, possibilitando que o usuário possa fazer edição e exclusão da sua própria página de perfil.<br>
 *Prioridade:* Essencial<br>
 *Casos de Uso Associados:* [UC004] – Editar Perfil
