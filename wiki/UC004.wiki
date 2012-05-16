@@ -1,0 +1,25 @@
+==UC004 – Editar Perfil==
+Este caso de uso envolve a ação do ator usuário para editar o seu perfil no sistema. 
+
+*Ator:* Usuário.<br>
+
+*Prioridade:* Importante.<br>
+
+*Requisitos Funcionais Associados:* [RF008] Gerenciar Perfil do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar logado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* Nenhuma<br>
+
+*Fluxo de eventos principal*
+ # O ator acessa a página de edição de perfil. 
+ # O sistema retorna a página contendo o formulário de edição de perfil.
+ # O ator preenche o formulário e submete os dados. 
+ # O sistema executa a ação, exibe notificação de sucesso e retorna a página pessoal do usuário.
+ # O caso de uso é encerrado
+
+*Fluxos de exceções*<br>
+
+*Fluxo de Exceção FE004-1 – Dados Incorretos*<br>
+
+ # O sistema informa a MSG “Dados Incorretos”.
+ # Volta para o passo 2 do fluxo principal.
