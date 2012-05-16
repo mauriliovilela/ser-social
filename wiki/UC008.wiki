@@ -1,0 +1,22 @@
+==UC008 – Excluir Álbum==
+Este caso de uso é responsável por permitir o ator editar um álbum.
+
+*Ator:* Usuário.<br>
+*Prioridade:* Importante.<br>
+*Requisitos Funcionais Associados:* [RF006] Gerenciar Álbuns do usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator ter efetuado a exclusão de um álbum escolhido.<br>
+*Fluxo de eventos principal*
+ # O ator seleciona o álbum que deseja excluir.
+ # O sistema retorna a página do álbum selecionado.
+ # O ator seleciona a opção de excluir o álbum.
+ # O sistema exibe notificação de confirmação da exclusão.
+ # O ator confirma a exclusão.
+ # O sistema executa a ação e retorna a página de álbuns.
+ # O caso de uso é encerrado.
+
+*Fluxos de Exceções*
+
+*Fluxo de Exceção FE008-1 – O ator não confirma a exclusão*
+ # Volta para o passo 2 do fluxo principal.
