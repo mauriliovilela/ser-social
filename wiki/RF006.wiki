@@ -1,4 +1,4 @@
 ==RF006 Gerenciar Álbuns do Usuário==
 *Descrição:* Este requisito consiste em funcionalidades de gerenciamento de álbuns, possibilitando que o usuário possa fazer a criação, edição e exclusão de álbuns.<br>
 *Prioridade:* Importante<br>
-*Casos de Uso Associados:* UC007 – Editar Álbum.
+*Casos de Uso Associados:* [UC007] – Editar Álbum.
