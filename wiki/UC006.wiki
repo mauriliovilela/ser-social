@@ -1,0 +1,21 @@
+==UC006 - Adicionar Álbum==
+Este caso de uso é responsável por permitir o ator adicionar um álbum.
+
+*Ator:* Usuário.<br>
+*Prioridade:* Importante.<br>
+*Requisitos Funcionais Associados:* [RF006] Gerenciar Álbuns do usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator ter criado um novo álbum.<br>
+
+*Fluxo de eventos principal*
+ # O ator seleciona a opção de criar álbum.
+ # O sistema retorna a página de criação de álbum.
+ # O ator preenche o formulário de criação e submete os dados.
+ # O sistema executa a ação, exibe notificação de sucesso da criação e retorna a página de álbuns.
+ # O caso de uso é encerrado.
+*Fluxos de exceções*
+
+*Fluxo de Exceção FE006-1 – Dados Incorretos*
+ # O sistema informa a MSG “Dados Incorretos”.
+ # Volta para o passo 2 do fluxo principal.
