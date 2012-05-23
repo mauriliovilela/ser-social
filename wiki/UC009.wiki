@@ -18,5 +18,9 @@ Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.
 *Fluxos de exceções*
 
 *Fluxo de Exceção FE009-1 – Dados Incorretos*
-#O sistema informa a MSG “Dados Incorretos”.
-#Volta para o passo 2 do fluxo principal.
+
+# O sistema informa a MSG “Dados Incorretos”.
+# Volta para o passo 2 do fluxo principal.
+# O ator preenche o formulário e submete os dados.
+# O sistema executa a ação e atualiza a página de recados públicos do amigo.
+# O caso de uso é encerrado
