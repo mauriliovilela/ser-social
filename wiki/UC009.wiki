@@ -1,0 +1,22 @@
+== UC009 – Enviar Recado Público ==
+Este caso de uso é responsável pela a ação do ator usuário realizar o envio de um recado público.
+
+*Ator:* Usuário.<br>
+*Prioridade:* Importante<br>
+Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.
+<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator ter enviado um recado para outro usuário.<br>
+*Fluxo de eventos principal*
+# O ator acessa a página de recados públicos do amigo.
+# O sistema retorna a página contendo o formulário de envio de recado público.
+# O ator preenche o formulário e submete os dados.
+# O sistema executa a ação e atualiza a página de recados públicos do amigo.
+# O caso de uso é encerrado.
+
+*Fluxos de exceções*
+
+*Fluxo de Exceção FE009-1 – Dados Incorretos*
+#O sistema informa a MSG “Dados Incorretos”.
+#Volta para o passo 2 do fluxo principal.
