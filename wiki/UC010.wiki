@@ -7,7 +7,9 @@ Este caso de uso é responsável pela a ação do ator usuário responder um rec
 *Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
 *Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
 *Pós-condição:* O ator ter respondido um recado para outro usuário.<br>
+
 *Fluxo de eventos principal*<br>
+
 1.O ator seleciona a opção de visualizar recados públicos.<br>
 2.O sistema retorna a página contendo os recados públicos.<br>
 3.O sistema exibe formulário de resposta de recado público.<br>
