@@ -1,0 +1,15 @@
+== UC011 – Visualizar Recado Público ==
+Este caso de uso é responsável pela a ação do ator usuário a página de recados públicos enviados.
+
+*Ator:* Usuário.<br>
+*Prioridade:* Desejável<br>
+*Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator visualizar a página de recados.
+
+*Fluxo de eventos principal*<br>
+
+1.O ator seleciona a opção de visualizar recados públicos.<br>
+2.O sistema retorna a página contendo os recados públicos.<br>
+3.O caso de uso é encerrado.
