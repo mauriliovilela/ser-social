@@ -9,18 +9,18 @@ Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.
 *Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
 *Pós-condição:* O ator ter enviado um recado para outro usuário.<br>
 *Fluxo de eventos principal*
-# O ator acessa a página de recados públicos do amigo.
-# O sistema retorna a página contendo o formulário de envio de recado público.
-# O ator preenche o formulário e submete os dados.
-# O sistema executa a ação e atualiza a página de recados públicos do amigo.
-# O caso de uso é encerrado.
+1.O ator acessa a página de recados públicos do amigo.<br>
+2.O sistema retorna a página contendo o formulário de envio de recado público.<br>
+3. O ator preenche o formulário e submete os dados.<br>
+4. O sistema executa a ação e atualiza a página de recados públicos do amigo.<br>
+5. O caso de uso é encerrado.<br>
 
 *Fluxos de exceções*
 
 *Fluxo de Exceção FE009-1 – Dados Incorretos*
 
-# O sistema informa a MSG “Dados Incorretos”.
-# Volta para o passo 2 do fluxo principal.
-# O ator preenche o formulário e submete os dados.
-# O sistema executa a ação e atualiza a página de recados públicos do amigo.
-# O caso de uso é encerrado
+1. O sistema informa a MSG “Dados Incorretos”.<br>
+2. Volta para o passo 2 do fluxo principal.<br>
+3. O ator preenche o formulário e submete os dados.<br>
+4. O sistema executa a ação e atualiza a página de recados públicos do amigo.<br>
+5. O caso de uso é encerrado.
