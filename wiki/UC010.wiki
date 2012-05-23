@@ -1,0 +1,16 @@
+== UC010 – Responder Recado Público ==
+Este caso de uso é responsável pela a ação do ator usuário responder um recado público enviado.
+
+*Ator:* Usuário.<br>
+*Prioridade:* Desejável<br>
+*Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator ter respondido um recado para outro usuário.<br>
+*Fluxo de eventos principal*<br>
+1.O ator seleciona a opção de visualizar recados públicos.<br>
+2.O sistema retorna a página contendo os recados públicos.<br>
+3.O sistema exibe formulário de resposta de recado público.<br>
+4.O ator preenche o formulário e submete os dados.<br>
+5.O sistema executa a ação e exibe notificação de sucesso.<br>
+6.O caso de uso é encerrado.<br>
