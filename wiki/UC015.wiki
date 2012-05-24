@@ -1,0 +1,18 @@
+==UC015 – Visualizar Recado Privado==
+
+Este caso de uso é responsável pela a ação do ator usuário a página de recados privados enviados.
+
+*Ator:* Usuário.<br>
+
+*Prioridade:* Desejável<br>
+
+*Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator visualizar a página de recados privado.<br>
+
+*Fluxo de eventos principal*<br>
+
+1.O ator seleciona a opção de visualizar recados privados.<br>
+2.O sistema retorna a página contendo os recados privados.<br>
+3.O caso de uso é encerrado.<br>
