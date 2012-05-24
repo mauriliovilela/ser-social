@@ -12,6 +12,6 @@ Este caso de uso é responsável pela a ação do ator usuário a página de rec
 
 *Fluxo de eventos principal*<br>
 
-1.O ator seleciona a opção de visualizar recados públicos.<br>
-2.O sistema retorna a página contendo os recados públicos.<br>
-3.O caso de uso é encerrado.
+ # O ator seleciona a opção de visualizar recados públicos. 
+ # O sistema retorna a página contendo os recados públicos. 
+ # O caso de uso é encerrado.
