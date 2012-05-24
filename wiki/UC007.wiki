@@ -13,7 +13,7 @@ Este caso de uso é responsável por permitir o ator editar um álbum.
  # O sistema retorna a página do álbum selecionado contendo o formulário de edição.
  # O ator faz as edições desejadas e submete os dados.
  # O sistema executa a ação, exibe notificação de sucesso da edição e retorna a página de álbuns.
-5. O caso de uso é encerrado.
+ # O caso de uso é encerrado.
 
 *Fluxos de exceções*<br>
 
