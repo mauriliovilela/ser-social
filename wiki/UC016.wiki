@@ -13,9 +13,9 @@ Este caso de uso é responsável pela a ação do ator usuário excluir um recad
 
 *Fluxo de eventos principal*<br>
 
-1.O ator seleciona a opção de visualizar recados privados.<br>
-2.O sistema retorna a página contendo os recados privados.<br>
-3.O ator seleciona o recado privado que deseja excluir.<br>
-4.O sistema exibe notificação de confirmação da exclusão.<br>
-5.O sistema executa a ação e atualiza a página de recados privados.<br>
-6.O caso de uso é encerrado.<br>
+ # O ator seleciona a opção de visualizar recados privados.<br>
+ # O sistema retorna a página contendo os recados privados.<br>
+ # O ator seleciona o recado privado que deseja excluir.<br>
+ # O sistema exibe notificação de confirmação da exclusão.<br>
+ # O sistema executa a ação e atualiza a página de recados privados.<br>
+ # O caso de uso é encerrado.<br>
