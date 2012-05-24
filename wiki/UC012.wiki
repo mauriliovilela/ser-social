@@ -13,9 +13,9 @@ Este caso de uso é responsável pela a ação do ator usuário excluir um recad
 
 *Fluxo de eventos principal*
 
-1.O ator seleciona a opção de visualizar recados públicos.<br>
-2.O sistema retorna a página contendo os recados públicos.<br>
-3.O ator seleciona o recado publico que deseja excluir.<br>
-4.O sistema exibe notificação de confirmação da exclusão.<br>
-5.O sistema executa a ação e atualiza a página de recados públicos.<br>
-6.O caso de uso é encerrado.<br>
+ # O ator seleciona a opção de visualizar recados públicos.
+ # O sistema retorna a página contendo os recados públicos.
+ # O ator seleciona o recado publico que deseja excluir.
+ # O sistema exibe notificação de confirmação da exclusão.
+ # O sistema executa a ação e atualiza a página de recados públicos.
+ # O caso de uso é encerrado.
