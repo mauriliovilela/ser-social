@@ -3,7 +3,9 @@
 Este caso de uso é responsável pela a ação do ator usuário realizar o envio de um recado privado.
 
 *Ator:* Usuário.<br>
+
 *Prioridade:* Importante<br>
+
 *Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
 *Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
 *Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
