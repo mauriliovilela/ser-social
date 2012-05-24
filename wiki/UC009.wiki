@@ -25,6 +25,6 @@ Este caso de uso é responsável pela a ação do ator usuário realizar o envio
 
  # O sistema informa a MSG “Dados Incorretos”.
  # Volta para o passo 2 do fluxo principal.
-3. O ator preenche o formulário e submete os dados.<br>
-4. O sistema executa a ação e atualiza a página de recados públicos do amigo.<br>
-5. O caso de uso é encerrado.
+ # O ator preenche o formulário e submete os dados.<br>
+ # O sistema executa a ação e atualiza a página de recados públicos do amigo.<br>
+ # O caso de uso é encerrado.
