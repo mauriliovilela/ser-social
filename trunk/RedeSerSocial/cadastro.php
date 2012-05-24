@@ -36,26 +36,29 @@
                     } elseif (!preg_match("/^[a-z0-9_\.\-]+@[a-z0-9_\.\-]*[a-z0-9_\-]+\.[a-z]{2,4}$/i", $email)) {
                         echo 'Digite um e-mail válido!';
                     } else {
+
+
+
                         include ('classes/DB.class.php');
                         $verificar = DB::getConn()->prepare("SELECT `id` FROM `usuarios` WHERE `email`=?");
                         if ($verificar->execute(array($email))) {
                             if ($verificar->rowCount() >= 1) {
                                 echo 'Este e-mail já está cadastrado em nosso sistema';
-                            } elseif ($senha == '') {
-                                echo 'Digite sua senha!';
-                            } elseif (strlen($senha) <= 4) {
-                                echo 'A senha deve conter mais que 4 caracteres';
+                            } elseif ($senha == '' OR strlen($senha) < 4) {
+                                echo 'Digite sua senha, ela tem de ter mais de 4 caracteres';
                             }
                             //Consertar o Captcha
-                            ////elseif (strtolower($captcha) <> strtolower($_SESSION['captchaCadastro'])) {
-                            //echo 'O código digitado não corresponde a imagem! ';
-                            //echo $captcha;
-                            // } else {
-                            $nascimento = "$ano-$mes-$dia";
-                            $senhaInsert = sha1($senha);
-                            $inserir = DB::getConn()->prepare("INSERT INTO`usuarios` SET `email`=?,`senha`=?, `nome`=?, `sobrenome`=?,`sexo`=?,`nascimento`=?, `cadastro`=NOW()");
-                            if ($inserir->execute(array($email, $senhaInsert, $nome, $sobrenome, $sexo, $nascimento))) {
-                                header('Location ./');
+                            // elseif (strtolower($captcha) <> strtolower($_SESSION['captchaCadastro'])) {
+                            //    echo 'O código digitado não corresponde a imagem! ';
+                            //   echo $captcha;
+                            //}
+                            else {
+                                $senhaInsert = sha1($senha);
+                                $nascimento = "$ano-$mes-$dia";
+                                $inserir = DB::getConn()->prepare("INSERT INTO`usuarios` SET `email`=?,`senha`=?, `nome`=?, `sobrenome`=?,`sexo`=?,`nascimento`=?, `cadastro`=NOW()");
+                                if ($inserir->execute(array($email, $senhaInsert, $nome, $sobrenome, $sexo, $nascimento))) {
+                                    header('Location: ./');
+                                }
                             }
                         }
                     }
@@ -84,7 +87,7 @@
                             <option <?php if ($sexo == 'homem') echo 'selected="selected"'; ?> value="homem">Homem&nbsp;</option>
                             <option <?php if ($sexo == 'mulher') echo 'selected="selected"'; ?>value="mulher">Mulher&nbsp;</option>
                             <option <?php if ($sexo == 'travesti') echo 'selected="selected"'; ?>value="travesti">Travesti&nbsp;</option>
-                            <option <?php if ($sexo == 'sapatao') echo 'selected="selected"'; ?>value="sapatao">Sapatão&nbsp;</option> 
+                            <option <?php if ($sexo == 'sapatao') echo 'selected="selected"'; ?>value="sapatao">Sapatão&nbsp;</option>
                         </select>
 
                         <span class="spanHide">Data de nascimento</span>
@@ -137,7 +140,7 @@
                         </select>
 
                         <span class="spanHide">E-mail</span>
-                        <input type="text" name="email" class="inputTxt" value="<?php echo $email; ?>"/> 
+                        <input type="text" name="email" class="inputTxt" value="<?php echo $email; ?>"/>
 
                         <span class="spanHide">Senha</span>
                         <input type="password" name="senha" class="inputTxt" value="<?php echo $senha; ?>"/>
@@ -149,7 +152,7 @@
 
                             <div class="inputFloat">
                                 <span>Digite os caracteres</span>
-                                <input type="text" name="palavra" class="inputTxt"/>
+                                <input type="text" name="captcha" class="inputTxt"/>
                             </div>
                         </div>
                         <span>&nbsp;</span>
