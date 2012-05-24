@@ -2,7 +2,9 @@
 Este caso de uso é responsável pela a ação do ator usuário a página de recados públicos enviados.
 
 *Ator:* Usuário.<br>
+
 *Prioridade:* Desejável<br>
+
 *Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
 *Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
 *Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
