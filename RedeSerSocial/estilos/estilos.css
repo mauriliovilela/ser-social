@@ -1,0 +1,21 @@
+@charset"utf-8";
+
+*{margin: 0; padding: 0;}
+body{font: 62.5% "Trebuchet MS", Arial,Helvetica,sans-serif;text-align: center;}
+
+.cAlign{width: 960px; text-align: left;clear: both; margin: 0 auto;}
+
+div#topo {width: 100%; background:#2b9fe5; overflow: hidden; color: #ffffff; font-size: 1.3em;padding: 5px 0;}
+div#topo span{float: right;}
+
+div#header{width: 100%;}
+
+div.left{width: 160px;}
+div.center{width: 480px; margin: 0 10px;}
+div.right{width: 300px;}
+
+div.left,
+div.center,
+div.right{min-height: 50px; background: #ccc;float: left; }
+
+div#content{margin: 10px 0;}

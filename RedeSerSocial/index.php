@@ -14,7 +14,14 @@ if (true == $_GET['sair']) {
     $objLogin->sair();
     header('Location: ./');
 }
-extract($objLogin->getDados($_SESSION['sersocial_usiario']), EXTR_PREFIX_ALL, 'user');
+
+$dados = $objLogin->getDados($_SESSION['sersocial_usuario']);
+
+if (!isset($dados)) {
+    extract($dados, EXTR_PREFIX_ALL, 'user');
+} else {
+    header('Location: ./');
+}
 ?>
 
 <!DOCTYPE HTML>
