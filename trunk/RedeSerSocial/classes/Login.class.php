@@ -3,7 +3,7 @@
 	class Login extends DB{
 		
 		private $tabela = 'usuarios';
-		private $prefix = 'socialbigui_';
+		private $prefix = 'sersocial_';
 		private $cookie = true;
 		public $erro = '';
 		
@@ -55,7 +55,7 @@
 				}
 				return true;
 			}else{
-				$this->erro=  'Usuario inválido';
+				$this->erro=  'Usuário ou senha inválidos';
 				return false;
 			}
 		}
@@ -69,7 +69,7 @@
 				if($cookei){
 					return $this->dadosLembrados();
 				}else{
-					$this->erro = 'Você não esta logado';
+					$this->erro = 'Você não está logado';
 					return false;
 				}
 			}
@@ -83,7 +83,7 @@
 					$valor = sha1($valor);
 					
 					if($_COOKIE[$this->prefix.'token'] !== $valor){
-						$this->erro = 'Você não estálogado';
+						$this->erro = 'Você não está logado';
 						return false;
 					}
 				}
