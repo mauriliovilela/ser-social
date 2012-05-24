@@ -19,6 +19,7 @@ Este caso de uso é responsável pela a ação do ator usuário realizar o envio
 
 *Fluxos de exceções*<br>
 
-Fluxo de Exceção [FE009-1] – Dados Incorretos<br>
+*Fluxo de Exceção [FE009-1] – Dados Incorretos*<br>
+
 1.O sistema informa a MSG “Dados Incorretos”.<br>
 2.Volta para o passo 2 do fluxo principal.<br>
