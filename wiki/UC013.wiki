@@ -13,15 +13,15 @@ Este caso de uso é responsável pela a ação do ator usuário realizar o envio
 
 *Fluxo de eventos principal*<br>
 
-1.O ator acessa a página de recados privados do amigo.<br>
-2.O sistema retorna a página contendo o formulário de envio de recado privado.<br>
-3.O ator preenche o formulário e submete os dados.<br>
-4.O sistema executa a ação e atualiza a página de recados privados do amigo.<br>
-5.O caso de uso é encerrado.<br>
+ # O ator acessa a página de recados privados do amigo.
+ # O sistema retorna a página contendo o formulário de envio de recado privado.
+ # O ator preenche o formulário e submete os dados.
+ # O sistema executa a ação e atualiza a página de recados privados do amigo.
+ # O caso de uso é encerrado.
 
 *Fluxos de exceções*<br>
 
-*Fluxo de Exceção [FE009-1] – Dados Incorretos*<br>
+*Fluxo de Exceção [FE009-1] – Dados Incorretos*
 
-1.O sistema informa a MSG “Dados Incorretos”.<br>
-2.Volta para o passo 2 do fluxo principal.<br>
+ # O sistema informa a MSG “Dados Incorretos”.
+ # Volta para o passo 2 do fluxo principal.
