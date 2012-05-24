@@ -1,0 +1,29 @@
+==UC020 – Editar Foto==
+
+Este caso de uso é responsável por permitir o ator editar uma foto.
+
+*Ator:* Usuário.
+
+*Prioridade:* Importante
+
+*Requisitos Funcionais Associados:* [RF007] Gerenciar Fotos do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
+*Pós-condição:* O ator ter efetuado a exclusão de um álbum escolhido.
+
+*Fluxo de eventos principal*
+
+1.O ator seleciona o álbum no qual deseja adicionar uma foto.<br>
+2.O sistema retorna a página do álbum.<br>
+3.O ator seleciona a foto que deseja editar.<br>
+4.O sistema retorna a página contendo o formulário de edição.<br>
+5.O ator preenche o formulário e submete os dados.<br>
+6.O sistema executa a ação, exibe notificação de sucesso e exibe a página do álbum.<br>
+7.O caso de uso é encerrado.
+
+*Fluxos de exceções*
+
+Fluxo de Exceção [FE020-1] – Dados Incorretos
+
+1.O sistema informa a MSG “Dados Incorretos”.<br>
+2.Volta para o passo 2 do fluxo principal.<br>
