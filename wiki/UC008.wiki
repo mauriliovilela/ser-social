@@ -2,7 +2,9 @@
 Este caso de uso é responsável por permitir o ator editar um álbum.
 
 *Ator:* Usuário.<br>
+
 *Prioridade:* Importante.<br>
+
 *Requisitos Funcionais Associados:* [RF006] Gerenciar Álbuns do usuário.<br>
 *Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
 *Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
