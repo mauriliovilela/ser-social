@@ -13,9 +13,9 @@ Este caso de uso é responsável pela a ação do ator usuário responder um rec
 
 *Fluxo de eventos principal*<br>
 
-1.O ator seleciona a opção de visualizar recados privados.<br>
-2.O sistema retorna a página contendo os recados privados.<br>
-3.O sistema exibe formulário de resposta de recado privado.<br>
-4.O ator preenche o formulário e submete os dados.<br>
-5.O sistema executa a ação e exibe notificação de sucesso.<br>
-6.O caso de uso é encerrado.
+ # O ator seleciona a opção de visualizar recados privados.
+ # O sistema retorna a página contendo os recados privados.
+ # O sistema exibe formulário de resposta de recado privado.
+ # O ator preenche o formulário e submete os dados.
+ # O sistema executa a ação e exibe notificação de sucesso.
+ # O caso de uso é encerrado.
