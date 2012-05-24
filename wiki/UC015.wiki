@@ -13,6 +13,6 @@ Este caso de uso é responsável pela a ação do ator usuário a página de rec
 
 *Fluxo de eventos principal*<br>
 
-1.O ator seleciona a opção de visualizar recados privados.<br>
-2.O sistema retorna a página contendo os recados privados.<br>
-3.O caso de uso é encerrado.<br>
+ # O ator seleciona a opção de visualizar recados privados. 
+ # O sistema retorna a página contendo os recados privados. 
+ # O caso de uso é encerrado.   
