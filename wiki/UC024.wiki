@@ -1,0 +1,20 @@
+==UC024 – Aceitar Convite==
+
+Este caso de uso é responsável por permitir o ator aceitar os convites enviados para o seu perfil.
+
+*Ator:* Usuário.
+
+*Prioridade:* Importante
+
+*Requisitos Funcionais Associados:* [RF005] Gerenciar Convites do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login) e deve estar na página de álbuns.<br>
+*Pós-condição:* O ator deve conseguir aceitar um convite selecionado.
+
+*Fluxo de eventos principal*
+
+ # O ator acessa a página de visualização convites.<br>
+ # O sistema retorna a página de visualização de convites.<br>
+ # O ator seleciona o convite e seleciona a opção de aceitar.<br>
+ # O sistema executa a ação e atualiza a página de visualização de convites.<br>
+ # O caso de uso é encerrado.
