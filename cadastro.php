@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
     <head>
@@ -18,83 +19,141 @@
         <div class="cAlign">
             <!--Início do Conteúdo-->
             <div id="content">
-              
+
                 <h1>Cadastre-se!</h1>
                 <!-- Início do Formulário-->
                 <div id="formulario">
-                    <form name="cadastro" method="post" action="cadastrar.php">
+                    <?php
+                    if (isset($_SERVER['REQUEST_METHOD']) AND $_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                        extract($_POST);
+
+                        echo '<h3>';
+
+                        if ($nome == '' OR strlen($nome) < 4) {
+                            echo 'Escreva seu nome corretamente';
+                        } elseif ($sobrenome == '' OR strlen($sobrenome) < 6) {
+                            echo 'Escreva seu sobrenome corretamente';
+                        } elseif ($email == '') {
+                            echo 'Escreva seu e-mail';
+                        } elseif (!preg_match("/^[a-z0-9_\.\-]+@[a-z0-9_\.\-]*[a-z0-9_\-]+\.[a-z]{2,4}$/i", $email)) {
+                            echo 'Este e-mail é invalido';
+                        } else {
+
+                            include('classes/DB.class.php');
+
+                            try {
+
+                                $verificar = DB::getConn()->prepare("SELECT `id` FROM `usuarios` WHERE `email`=?");
+                                if ($verificar->execute(array($email))) {
+                                    if ($verificar->rowCount() >= 1) {
+                                        echo 'Este e-mail ja esta cadastrado em nosso sistema';
+                                    } elseif ($senha == '' OR strlen($senha) < 4) {
+                                        echo 'Digite sua senha, ela tem de ter mais de 4 caracteres';
+                                    }
+                                    //elseif(strtolower($captcha) <> strtolower($_SESSION['captchaCadastro'])){
+                                    //echo 'O código digitado no captcha não corresponde com a imagem';
+                                    //}
+                                    else {
+                                        $senhaInsert = sha1($senha);
+                                        $nascimento = "$ano-$mes-$dia";
+
+                                        $inserir = DB::getConn()->prepare("INSERT INTO `usuarios` SET `email`=?, `senha`=?, `nome`=?, `matricula`=?,`sobrenome`=?, `sexo`=?, `nascimento`=?, `cadastro`=NOW()");
+
+                                        if ($inserir->execute(array($email, $senhaInsert, $nome, $matricula, $sobrenome, $sexo, $nascimento))) {
+                                            header('Location: ./');
+                                        }
+                                    }
+                                }
+                            } catch (PDOException $e) {
+                                echo 'Sistema indisponível';
+                                logErros($e);
+                            }
+                        }
+                        echo '</h3>';
+                    }
+                    ?>
+                    <form name="cadastro" method="post" action="">
                         <div>
                             <div class="inputFloat">
                                 <span>Nome</span>
-                                <input type="text" name="nome" class="inputTxt"/>                                
+                                <input type="text" name="nome" class="inputTxt" value="<?php if (isset($nome)) echo $nome; ?>"/>                                
                             </div>
 
                             <div class="inputFloat">
                                 <span>Sobrenome</span>
-                                <input type="text" name="sobrenome" class="inputTxt"/>                                
+                                <input type="text" name="sobrenome" class="inputTxt"value="<?php if (isset($sobrenome)) echo $sobrenome; ?>"/>                                
                             </div>
 
                             <div class="inputFloat">
                                 <span>Matrícula</span>
-                                <input type="text" name="matricula" class="inputTxt"/>                                
+                                <input type="text" name="matricula" class="inputTxt" value="<?php if (isset($sobrenome)) echo $sobrenome; ?>"/>                                
                             </div>
 
                         </div>
 
                         <span class="spanHide">Eu sou</span>
                         <select name="sexo">
-                            <option value="homem">Homem&nbsp;</option>
-                            <option value="mulher">Mulher&nbsp;</option>
-                            <option value="travesti">Travesti&nbsp;</option>
-                            <option value="Sapatão">Sapatão&nbsp;</option>
+                            <option <?php if ($sexo == 'homem') echo 'selected="selected"'; ?> value="homem">Homem&nbsp;</option>
+                            <option <?php if ($sexo == 'mulher') echo 'selected="selected"'; ?>value="mulher">Mulher&nbsp;</option>
+                            <option <?php if ($sexo == 'travesti') echo 'selected="selected"'; ?>value="travesti">Travesti&nbsp;</option>
+                            <option <?php if ($sexo == 'sapatao') echo 'selected="selected"'; ?>value="sapatao">Sapatão&nbsp;</option>
                         </select>
 
                         <span class="spanHide">Data de nascimento</span>
                         <select name="dia">
                             <?php
-                            //Neste for, enquanto a variável $dia for menor ou igual a 31 ocorre um incremento.
                             for ($d = 1; $d <= 31; $d++) {
-                                //Aqui será acrescentado o zero nos dias 1º até o 9º.
-                                //Se o dia for menor que 10, a variável $zero recebe 0, senão recebe uma string vazia.
+
                                 if ($d < 10) {
                                     $zero = 0;
                                 }
                                 else
                                     $zero = '';
-                                // $zero = ($dia < 10) ? 0 : ''; Usando o ternário                                // 
-                                //No valor do select será concatenado a variável $zero com a variavel $dia
-                                echo '<option value="', $zero, $d, '">', $zero, $d, ' &nbsp;</option>';
+                                if ($zero . $d == $dia) {
+                                    echo '<option selected="selected" value="', $zero, $d, '">', $zero, $d, ' &nbsp;</option>';
+                                } else {
+                                    echo '<option value="', $zero, $d, '">', $zero, $d, ' &nbsp;</option>';
+                                }
                             }
                             ?>
                         </select>
 
+
                         <select name="mes">
                             <?php
-                            //$Array com os meses do ano.
                             $meses = array('', 'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
-                            //Neste for, enquanto a variável $m for menor ou igual a 12 ocorre um incremento.
+
                             for ($m = 1; $m <= 12; $m++) {
+
                                 $zero = ($m < 10) ? 0 : '';
-                                echo '<option value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
+                                if ($zero . $m == $mes) {
+                                    echo '<option selected="selected" value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
+                                } else {
+                                    echo '<option value="', $zero, $m, '">', $meses[$m], ' &nbsp;</option>';
+                                }
                             }
                             ?>
                         </select>
 
                         <select name="ano">
                             <?php
-                            //Pega o ano atual(2012) e decrementa até 100 anos
                             for ($a = date('Y'); $a >= (date('Y') - 100); $a--) {
-                                echo '<option value="', $a, '">', $a, '</option>';
+                                if ($a == $ano) {
+                                    echo '<option selected="selected" value="', $a, '">', $a, '</option>';
+                                } else {
+                                    echo '<option value="', $a, '">', $a, '</option>';
+                                }
                             }
                             ?>
 
                         </select>
 
                         <span class="spanHide">E-mail</span>
-                        <input type="text" name="email" class="inputTxt"/> 
+                        <input type="text" name="email" class="inputTxt" value="<?php echo $email; ?>"/>
 
                         <span class="spanHide">Senha</span>
-                        <input type="password" name="senha" class="inputTxt"/>
+                        <input type="password" name="senha" class="inputTxt" value="<?php echo $senha; ?>"/>
 
                         <span class="spanHide">Verificação contra fraudes</span>
                         <div>
@@ -103,7 +162,7 @@
 
                             <div class="inputFloat">
                                 <span>Digite os caracteres</span>
-                                <input type="text" name="palavra" class="inputTxt"/>
+                                <input type="text" name="captcha" class="inputTxt"/>
                             </div>
                         </div>
                         <span>&nbsp;</span>
