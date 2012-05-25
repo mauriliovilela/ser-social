@@ -1,0 +1,25 @@
+==UC032 – Efetuar Logoff==
+
+Este caso de uso é responsável por permitir o ator efetuar o logoff.
+
+*Ator:* Usuário.
+
+*Prioridade:* Importante
+
+*Requisitos Funcionais Associados:* [RF002] Gerenciar Acesso do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login) e deve estar na página de álbuns.<br>
+*Pós-condição:* O ator deve ter saído do sistema.
+
+*Fluxo de eventos principal*
+
+ # O ator seleciona a opção de logoff.<br>
+ # O sistema exibe notificação de confirmação de logoff.<br>
+ # O ator confirma o logoff.<br>
+ # O sistema encerra a seção do usuário e retorna a página inicial do sistema.<br>
+ # O caso de uso é encerrado.
+
+*Fluxos de exceções*
+
+*Fluxo de Exceção [FE031-1] – O ator não confirma o logoff*<br>
+ # O caso de uso é encerrado.
