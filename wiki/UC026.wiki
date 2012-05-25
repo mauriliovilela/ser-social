@@ -1,0 +1,27 @@
+==UC026 – Adicionar Comentário==
+
+Este caso de uso é responsável por permitir o ator postar um comentário em uma foto.
+
+*Ator:* Usuário.
+
+*Prioridade:* Importante
+
+*Requisitos Funcionais Associados:* [RF009] Gerenciar Comentários nas Fotos do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login) e deve estar na página de álbuns.<br>
+*Pós-condição:* O ator deve conseguir um comentário.
+
+*Fluxo de eventos principal*
+
+ # O ator seleciona uma foto do álbum.<br>
+ # O sistema retorna a página de visualização de foto.<br>
+ # O ator preenche o campo de comentário e submete os dados.<br>
+ # O sistema executa a ação e atualiza a página.<br>
+ # O caso de uso é encerrado.
+
+*Fluxos de exceções*
+
+*Fluxo de Exceção [FE026-1] – Dados Incorretos*
+
+ # O sistema informa a MSG “Dados Incorretos”.<br>
+ # Volta para o passo 2 do fluxo principal.
