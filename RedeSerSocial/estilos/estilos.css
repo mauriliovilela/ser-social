@@ -1,7 +1,7 @@
 @charset"utf-8";
 
 *{margin: 0; padding: 0;}
-body{font: 62.5% "Trebuchet MS", Arial,Helvetica,sans-serif;text-align: center;}
+body{background-color: #ededed; font: 62.5% "Trebuchet MS", Arial,Helvetica,sans-serif;text-align: center;}
 
 .cAlign{width: 960px; text-align: left;clear: both; margin: 0 auto;}
 
@@ -10,12 +10,28 @@ div#topo span{float: right;}
 
 div#header{width: 100%;}
 
-div.left{width: 160px;}
-div.center{width: 480px; margin: 0 10px;}
-div.right{width: 300px;}
+    div.left{width: 160px;}
+    div.center{width: 480px; margin: 0 10px;}
+    div.right{width: 300px;}
 
-div.left,
-div.center,
-div.right{min-height: 50px; background: #ccc;float: left; }
-
-div#content{margin: 10px 0;}
+    div.left,
+    div.center,
+    div.right{min-height: 50px; float: left; }
+    
+    div#logo{margin-top: 20px;float: left;}
+    div#menu-principal{float: left;margin-top: 20px;}
+    div#menu-principal ul{list-style: none;font-size: 1.4em;}
+    div#menu-principal ul li{float: left;}
+    div#menu-principal ul li a{float: left; background: #ffffff;color: #2b9fe5;text-decoration: none;padding: 4px 10px;margin-right: 6px;}
+    div#menu-principal ul li a:hover{background-color: #ac208d;color: #ffffff;}
+    
+div#content{margin: 10px 0; float: left;}
+    div.blocos{width: 100%;min-height: 50px;margin-bottom: 10px; background: #ffffff;}
+    
+    div#menu-lateral{overflow: hidden;}
+    div#menu-lateral ul{list-style: none;}
+    div#menu-lateral ul li{float: left;width: 100%;}
+    div#menu-lateral ul li a{display: block; float: left;text-decoration: none;color: #2b9fe5;padding: 6px 5px 6px 25px;width: 100%;font-size: 1.3em;}
+    div#menu-lateral ul li a:hover{background-color: #ac208d;color: #ffffff;}
+    
+div#footer{width: 100%; clear: both;min-height: 20px; background:#2b9fe5}
