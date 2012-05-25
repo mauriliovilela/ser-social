@@ -1,0 +1,18 @@
+==UC030 – Visualizar Amigos==
+
+Este caso de uso é responsável por permitir o ator visualizar seus amigos.
+
+*Ator:* Usuário.
+
+*Prioridade:* Essencial
+
+*Requisitos Funcionais Associados:* [RF003] Gerenciar Amigos do Usuário.<br>
+*Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login) e deve estar na página de álbuns.<br>
+*Pós-condição:* O ator deve conseguir visualizar sua página de amigos.
+
+*Fluxo de eventos principal*
+
+ # O ator acessa a página de visualização de amigos.<br>
+ # O sistema retorna a página contendo todos os amigos do usuário.<br>
+ # O caso de uso é encerrado.
