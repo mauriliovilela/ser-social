@@ -5,6 +5,7 @@
         <meta charset="utf-8"/>
         <title>Rede Ser Social - Cadastro</title>
         <link rel="stylesheet" href="estilos/cadastro.css" type="text/css"/>
+        <script type="text/javascript" src="js/validacoes.js"></script>
     </head>
 
     <body>
@@ -74,14 +75,13 @@
                                 <span>Sobrenome</span>
                                 <input type="text" name="sobrenome" class="inputTxt"value="<?php if (isset($sobrenome)) echo $sobrenome; ?>"/>                                
                             </div>
-                            <!--
-                                                      <div class="inputFloat">
-                                                            <span>Matrícula</span>
-                                                            <input type="text" name="matricula" class="inputTxt"/>                                
-                                                        </div>-->
+
+                            <div class="inputFloat">
+                                <span>Matrícula</span>
+                                <input type="text" name="matricula" class="inputTxt" onKeyUp="javascript:somente_numero(this);" value="<?php if (isset($matricula)) echo $matricula; ?>"/>                                
+                            </div>
 
                         </div>
-
                         <span class="spanHide">Eu sou</span>
                         <select name="sexo">
                             <option <?php if ($sexo == 'homem') echo 'selected="selected"'; ?> value="homem">Homem&nbsp;</option>
