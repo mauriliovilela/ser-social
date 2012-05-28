@@ -37,7 +37,7 @@
 		function logar($usuario,$senha,$lembrar=false){
 			if($this->validar($usuario,$senha)){
 				
-				if(!isset($_SESSION)){
+				if(!$_SESSION){
 					session_start();
 				}
 				
@@ -55,21 +55,21 @@
 				}
 				return true;
 			}else{
-				$this->erro=  'Usuário ou senha inválidos';
+				$this->erro=  'Usuario invalido';
 				return false;
 			}
 		}
 		
 		function logado($cookei=true){
-			if(!isset($_SESSION)){
+			if(!$_SESSION){
 				session_start();
 			}
 			
-			if(!isset($_SESSION[$this->prefix.'logado']) AND $_SESSION[$this->prefix.'logado']==false){
+			if(!isset($_SESSION[$this->prefix.'logado']) AND !$_SESSION[$this->prefix.'logado']){
 				if($cookei){
 					return $this->dadosLembrados();
 				}else{
-					$this->erro = 'Você não está logado';
+					$this->erro = 'Você não esta logado';
 					return false;
 				}
 			}
@@ -92,7 +92,7 @@
 		}		
 		
 		function sair($cookie=true){
-			if(!isset($_SESSION)){
+			if(!$_SESSION){
 				session_start();
 			}
 			
