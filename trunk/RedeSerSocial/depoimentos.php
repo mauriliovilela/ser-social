@@ -3,7 +3,7 @@
         
             <div class="center">
                
-                <div class="blocos" id="deixar-recados">
+                <div class="blocos" id="dexar-recados">
                     <h1><?php echo $user_nome.' '.$user_sobrenome ?></h1>
                     
                     <form name="dexar-recado" action="" method="post" enctype="multipart/form-data">
@@ -12,7 +12,7 @@
                 </div><!--blocos-->
 
                 <div class="blocos" id="pagina">
-                	<h2>atualizações</h2>
+                	<h2>depoimentos</h2>
                 </div><!--blocos-->
                 
             </div><!--center-->
@@ -20,7 +20,7 @@
             <div class="right">
             
                 <div class="blocos" id="publicidade">
-                    <iframe width="300" height="250" src="http://www.youtube.com/embed/mx2ZOdKSd90" frameborder="0" allowfullscreen></iframe>
+                    <img src="midias/banner.gif" />
                 </div><!--blocos-->
                 
                 <div class="blocos" id="meus-amigos">
