@@ -165,10 +165,8 @@
         </div><!--Fim do cAlign-->
 
         <!--Início do Rodapé-->
-        <div id="footer">
-            <p>&COPY; Copyright - <a href="#" target="_blank">Ser Social 2012</a> - Todos os Direitos Reservados</p>
-            <p><a href="#" target="_blank">Sobre</a> - <a href="#" target="_blank">Desenvolvedores</a> · <a href="#" target="_blank">Privacidade</a> · <a href="#" target="_blank">Termos</a> · <a href="#" target="_blank">Ajuda</a>
-        </div><!--Fim do Rodapé-->
+       <?php include('includes/footer.php'); ?>
+       <!--Fim do Rodapé-->
     </body>
 
 </html>
