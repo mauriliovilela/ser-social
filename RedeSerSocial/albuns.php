@@ -3,7 +3,7 @@
         
             <div class="center">
                
-                <div class="blocos" id="deixar-recados">
+                <div class="blocos" id="dexar-recados">
                     <h1><?php echo $user_nome.' '.$user_sobrenome ?></h1>
                     
                     <form name="dexar-recado" action="" method="post" enctype="multipart/form-data">
@@ -12,7 +12,7 @@
                 </div><!--blocos-->
 
                 <div class="blocos" id="pagina">
-                	<h2>atualizações</h2>
+                	<h2>fotos</h2>
                 </div><!--blocos-->
                 
             </div><!--center-->
