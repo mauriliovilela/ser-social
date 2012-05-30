@@ -13,7 +13,7 @@
         <!--Início do Topo-->
         <div id="topo">
             <div class="cAlign">
-            <a href="http://www.joaquimnabuco.edu.br/" > <img src="images/logo.png" alt="Ser Social"> </a>  <!--<span><a href="http://www.joaquimnabuco.edu.br/" >Joaquim Nabuco</a> </span><span><a href="http://www.joaquimnabuco.edu.br/" >Facebook</a> </span> <span><a href="http://www.mauriciodenassau.edu.br/" >Faculdade Maurício de Nassau</a> </span>--></div>
+            <a href="./" > <img src="images/logo.png" alt="Ser Social"> </a>  <!--<span><a href="http://www.joaquimnabuco.edu.br/" >Joaquim Nabuco</a> </span><span><a href="http://www.joaquimnabuco.edu.br/" >Facebook</a> </span> <span><a href="http://www.mauriciodenassau.edu.br/" >Faculdade Maurício de Nassau</a> </span>--></div>
         </div>
         <!--Fim do Topo-->
 

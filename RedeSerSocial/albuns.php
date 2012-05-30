@@ -20,32 +20,10 @@
             <div class="right">
             
                 <div class="blocos" id="publicidade">
-                    <iframe width="300" height="250" src="http://www.youtube.com/embed/mx2ZOdKSd90" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="300" height="250" src="http://youtu.be/UhFZiLKrKyQ?hd=1" frameborder="0" allowfullscreen></iframe>
                 </div><!--blocos-->
                 
-                <div class="blocos" id="meus-amigos">
-                    <span>meus amigos(18) <a href="#">todos</a></span>
-                    <ul>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                        <li><a href="#"><img src="midias/user.jpg" alt="" title="usuario" /></a></li>
-                    </ul>
-                </div><!--blocos-->
+                <?php include('includes/amigos.php');?>
                                 
             </div><!--right-->
 
