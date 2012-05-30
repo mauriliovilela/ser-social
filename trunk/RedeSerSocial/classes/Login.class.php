@@ -55,7 +55,7 @@
 				}
 				return true;
 			}else{
-				$this->erro=  'Usuario invalido';
+				$this->erro=  'Usuario ou senha incorretos';
 				return false;
 			}
 		}
@@ -90,7 +90,7 @@
 			}
 			return true;			
 		}		
-		
+		//UC032 - Efetuar Logoff
 		function sair($cookie=true){
 			if(!$_SESSION){
 				session_start();

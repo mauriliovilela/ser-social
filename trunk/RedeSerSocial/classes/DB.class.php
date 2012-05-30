@@ -3,7 +3,7 @@
 		private static $conn;
 		static function getConn(){
 			if(is_null(self::$conn)){
-				self::$conn = new PDO('mysql:host=localhost;dbname=ser','root','');
+				self::$conn = new PDO('mysql:host=dbmy0011.whservidor.com;dbname=renascerpe_1','renascerpe_1','d0m1r2c2');
 				self::$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 			}
 			return self::$conn;
