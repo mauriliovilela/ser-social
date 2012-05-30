@@ -9,9 +9,8 @@ Este caso de uso é responsável por permitir o ator buscar outro usuários no s
 *Pós-condição:* Nenhuma.<br>
 
 *Fluxo de eventos principal*
- # O ator seleciona a página de busca.
- # O sistema retorna a página de busca.
- # O ator preenche o formulário de submete os dados.
+ # O ator seleciona a opção de busca.
+ # O ator preenche o campo e submete os dados.
  # O sistema executa a ação e retorna os resultados da busca.
  # O caso de uso é encerrado.
 
