@@ -3,8 +3,9 @@
 
     <div class="center">
 
-        <div class="blocos" id="dexar-recados">
+        <div class="blocos" id="deixar-recados">
             <h1><?php echo $user_nome . ' ' . $user_sobrenome ?>
+
                 <?php
                 if ($idDaSessao <> $idExtrangeiro) {
                     $e_meu_amigo = DB::getConn()->prepare('SELECT * FROM `amizade` WHERE (de=? AND para=?) OR (para=? AND de=?) LIMIT 1');
@@ -32,6 +33,8 @@
 
         <div class="blocos" id="pagina">
             <h2>perfil</h2>
+
+
         </div><!--blocos-->
 
     </div><!--center-->
