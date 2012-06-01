@@ -21,13 +21,13 @@
 
             $e_meu_amigo->execute(array($idDaSessao));
             if ($e_meu_amigo->rowcount() > 0) {
-                echo '<ul >';
+                echo '<ul style=" color:#FF0000; text-decoration:none; padding:0.5em; margin-bottom:0.1em; ">';
                 while ($resmeuamigo = $e_meu_amigo->fetch(PDO::FETCH_ASSOC)) {
 
                     $dadosamizade->execute(array($resmeuamigo['de']));
                     $asdadosamizade = $dadosamizade->fetch(PDO::FETCH_ASSOC);
 
-                    echo '<li >' . $asdadosamizade['nome'] . ' ' . $asdadosamizade['sobrenome'] . ' quer ser seu amigo(a) <a href="php/amizade.php?ac=aceitar&id=' . $resmeuamigo['id'] . '">aceitar</a> <a href="php/amizade.php?ac=remover&id=' . $resmeuamigo['id'] . '&de=' . $resmeuamigo['de'] . '&para=' . $idDaSessao . '">recusar</a></li>';
+                    echo '<li">' . $asdadosamizade['nome'] . ' ' . $asdadosamizade['sobrenome'] . ' quer ser seu amigo(a) <a style="text-decoration:none;" href="php/amizade.php?ac=aceitar&id=' . $resmeuamigo['id'] . '"><b>aceitar</b></a> <a style="text-decoration:none;" href="php/amizade.php?ac=remover&id=' . $resmeuamigo['id'] . '&de=' . $resmeuamigo['de'] . '&para=' . $idDaSessao . '"><b>recusar</b></a></li>';
                 }
                 echo '</ul>';
             }
