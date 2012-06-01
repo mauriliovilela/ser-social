@@ -25,7 +25,7 @@
 					if($buscar->rowCount()>0){
 						echo '<ul style="text-decoration:none; ">';
 						while($resbusca=$buscar->fetch(PDO::FETCH_ASSOC)){
-							echo '<li style="text-decoration:none;  "><a style=" color:#FF0000; text-decoration:none; href="perfil.php?uid='.$resbusca['id'].'">'.$resbusca['nome'].' '.$resbusca['sobrenome'].'</a></li>';
+							echo '<li style="text-decoration:none;  "><a style=" color:#FF0000; text-decoration:none;" href="perfil.php?uid='.$resbusca['id'].'">'.$resbusca['nome'].' '.$resbusca['sobrenome'].'</a></li>';
 						}
 						echo '</ul>';
 					}

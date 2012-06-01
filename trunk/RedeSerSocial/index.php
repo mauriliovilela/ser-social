@@ -15,19 +15,19 @@
             <h2>atualizações</h2>
 
             <?php
-            $e_meu_amigo = DB::getConn()->prepare('SELECT * FROM `amizade` WHERE para=? AND `status`=0');
+            $e_meu_amigo = DB::getConn()->prepare('SELECT * FROM `amizade` WHERE para=? ANd `status`=0');
 
-            $dadosamizade = DB::getConn()->prepare('SELECT `nome` FROM `usuarios` WHERE `id`=? LIMIT 1');
+            $dadosamisade = DB::getConn()->prepare('SELECT `nome` FROM `usuarios` WHERE `id`=? LIMIT 1');
 
             $e_meu_amigo->execute(array($idDaSessao));
             if ($e_meu_amigo->rowcount() > 0) {
-                echo '<ul style=" color:#FF0000; text-decoration:none; padding:0.5em; margin-bottom:0.1em; ">';
+                echo '<ul>';
                 while ($resmeuamigo = $e_meu_amigo->fetch(PDO::FETCH_ASSOC)) {
 
                     $dadosamizade->execute(array($resmeuamigo['de']));
                     $asdadosamizade = $dadosamizade->fetch(PDO::FETCH_ASSOC);
 
-                    echo '<li">' . $asdadosamizade['nome'] . ' ' . $asdadosamizade['sobrenome'] . ' quer ser seu amigo(a) <a style="text-decoration:none;" href="php/amizade.php?ac=aceitar&id=' . $resmeuamigo['id'] . '"><b>aceitar</b></a> <a style="text-decoration:none;" href="php/amizade.php?ac=remover&id=' . $resmeuamigo['id'] . '&de=' . $resmeuamigo['de'] . '&para=' . $idDaSessao . '"><b>recusar</b></a></li>';
+                    echo '<li>' . $asdadsoamizade['nome'] . ' ' . $asdadosamizade['sobrenome'] . ' quer ser seu amigo <a href="php/amisade.php?ac=aceitar&id=' . $resmeuamigo['id'] . '">aceitar</a> <a href="php/amisade.php?ac=remover&id=' . $resmeuamigo['id'] . '&de=' . $resmeuamigo['de'] . '&para=' . $idDaSessao . '">recusar</a></li>';
                 }
                 echo '</ul>';
             }
@@ -42,6 +42,8 @@
         <div class="blocos" id="publicidade">
             <iframe width="300" height="250" src="http://www.youtube.com/embed/mx2ZOdKSd90" frameborder="0" allowfullscreen></iframe>
         </div><!--blocos-->
+
+
 
         <?php include('includes/amigos.php'); ?>
 
