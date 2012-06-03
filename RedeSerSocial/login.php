@@ -26,7 +26,7 @@
                 <h5>Acesse sua conta</h5>
                 <span>
                     <?php
-                    include('classes/Login.class.php');
+                     require_once('classes/Login.class.php');
                       extract($_POST);
                  
                     
