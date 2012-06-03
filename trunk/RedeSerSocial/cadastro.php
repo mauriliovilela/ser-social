@@ -67,8 +67,13 @@
                                         $inserir = DB::getConn()->prepare("INSERT INTO `usuarios` SET `email`=?, `senha`=?, `nome`=?, `matricula`=?,`sobrenome`=?, `sexo`=?, `nascimento`=?, `cadastro`=NOW()");
 
                                         if ($inserir->execute(array($email, $senhaInsert, $nome, $matricula, $sobrenome, $sexo, $nascimento))) {
-                                            header('Location: ./');
-                                        }
+                                       
+                                            echo "<script>alert('Seu cadastro foi realizado com sucesso!');document.location='login.php'</script>";
+						
+                                        }else{
+
+						                                echo "<script>alert('Erro ao gravar registro!');history.back()</script>";
+				                            }
                                     }
                                 }
                             } catch (PDOException $e) {
@@ -101,11 +106,18 @@
 
                         <span class="spanHide">Eu sou</span>
                         <select name="sexo">
-                            <option <?php if ($sexo == 'homem') echo 'selected="selected"'; ?> value="homem">Homem&nbsp;</option>
-                            <option <?php if ($sexo == 'mulher') echo 'selected="selected"'; ?>value="mulher">Mulher&nbsp;</option>
-                            <option <?php if ($sexo == 'travesti') echo 'selected="selected"'; ?>value="travesti">Travesti&nbsp;</option>
-                            <option <?php if ($sexo == 'viado') echo 'selected="selected"'; ?>value="viado">Viado&nbsp;</option>
-                            <option <?php if ($sexo == 'sapatao') echo 'selected="selected"'; ?>value="sapatao">Sapatão&nbsp;</option>
+                            <option <?php if (isset($sexo)){
+                                                if ($sexo == 'homem'){ 
+                                                    echo 'selected="selected"'; }}?> value="homem">Homem&nbsp;</option>
+                            <option <?php if (isset($sexo)){ 
+                                             if($sexo == 'mulher'){ 
+                                                  echo 'selected="selected"'; }}?>value="mulher">Mulher&nbsp;</option>
+                            <option <?php if (isset($sexo)){ 
+                                             if($sexo=='travesti'){ echo 'selected="selected"'; }}?>value="travesti">Travesti&nbsp;</option>
+                            <option <?php if (isset($sexo)){ 
+                                            if($sexo== 'viado'){ echo 'selected="selected"'; }}?>value="viado">Viado&nbsp;</option>
+                            <option <?php if (isset($sexo)){ 
+                                              if ($sexo == 'sapatao'){ echo 'selected="selected"'; }}?>value="sapatao">Sapatão&nbsp;</option>
                         </select>
 
                         <span class="spanHide">Data de nascimento</span>
@@ -158,10 +170,10 @@
                         </select>
 
                         <span class="spanHide">E-mail</span>
-                        <input type="text" name="email" class="inputTxt" value="<?php echo $email; ?>"/>
+                        <input type="text" name="email" class="inputTxt" value="<?php if (isset($email)) {echo $email; } ?>"/>
 
                         <span class="spanHide">Senha</span>
-                        <input type="password" name="senha" class="inputTxt" value="<?php echo $senha; ?>"/>
+                        <input type="password" name="senha" class="inputTxt" value="<?php if (isset($senha)) {echo $senha ;} ; ?>"/>
 
                                 <!-- <span class="spanHide">Verificação contra fraudes</span>
                                 <div>
