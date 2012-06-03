@@ -26,23 +26,35 @@
                 <h5>Acesse sua conta</h5>
                 <span>
                     <?php
-                    if (isset($_POST['logar'])) {
-                        if ($objLogin->logar($_POST['email'], $_POST['senha'], $_POST['lembrar'])) {
-                            header('Location: ./');
+                    include('classes/Login.class.php');
+                      extract($_POST);
+                 
+                    
+    
+                    if (isset($_POST['logar'])){
+                     
+                    $login = new Login();	
+                    $login->setSenha($_POST['senha']);
+                    $login->setUsuario($_POST['email']);
+                    if (!isset($_POST['lembrar'])){
+                        $_POST['lembrar']=false;
+                    }
+                    $login->setLembrar($_POST['lembrar']);
+                        if ($login->logar()) {
+                            echo "<script>alert('Login efetuado com sucesso!');document.location='perfil.php'</script>";                       
                             exit;
                         } else {
-                            echo $objLogin->erro;
-                        }
+                        echo "<script>alert('Por favor verifique se os dados informados estão corretos!');document.location='login.php'</script>";                        }
                     }
                     ?>
                 </span>            
                 <form name="login" method="post" enctype="multipart/form-data" action="">
                     <span>E-mail:</span>
-                    <input id="t" type="text" name="email" />
+                    <input id="emailId" type="text" name="email" />
                     <span>Senha:</span>
-                    <input id="t" type="password" name="senha" />
+                    <input id="senhaId" type="password" name="senha" />
                     <span></span>
-                    <input type="checkbox" name="lembrar" />
+                    <input type="checkbox" value ="false" name="lembrar" />
                     Lembrar<span></span>
                     <input type="submit" name="logar" value="Entrar" />
                 </form>
