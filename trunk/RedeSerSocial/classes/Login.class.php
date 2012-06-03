@@ -1,6 +1,6 @@
 <?php
 
-include('classes/DB.class.php');
+ require_once('classes/DB.class.php');
 	class Login extends DB{
 		
 		private $tabela = 'usuarios';
