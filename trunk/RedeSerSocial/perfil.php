@@ -1,4 +1,6 @@
-<?php include('includes/header.php'); ?>        
+<?php  require_once('includes/header.php'); 
+      
+?>        
 <div id="amarra-center-left">
 
     <div class="center">
@@ -6,7 +8,7 @@
         <div class="blocos" id="deixar-recados">
             <h1><?php echo $user_nome . ' ' . $user_sobrenome ?>
                 <span>
-                    <?php
+                    <?php                      require_once('classes/DB.class.php');
                     if ($idDaSessao <> $idExtrangeiro) {
                         $e_meu_amigo = DB::getConn()->prepare('SELECT * FROM `amizade` WHERE (de=? AND para=?) OR (para=? AND de=?) LIMIT 1');
                         $e_meu_amigo->execute(array($idDaSessao, $idExtrangeiro, $idDaSessao, $idExtrangeiro));
@@ -33,6 +35,7 @@
             <h2>perfil</h2>
 
             <?php
+            
             if (isset($_GET['perfil']) AND $_GET['perfil'] == 'UPLOAD') {
                 ?>
                 <form name="upload-foto-perfil" enctype="multipart/form-data" method="post" action="php/crop.php">
@@ -56,11 +59,11 @@
             <iframe width="300" height="250" src="http://www.youtube.com/embed/mx2ZOdKSd90" frameborder="0" allowfullscreen></iframe>
         </div><!--blocos-->
 
-        <?php include('includes/amigos.php'); ?>
+        <?php  require_once('includes/amigos.php'); ?>
 
     </div><!--right-->
 
 
 </div><!--amarra-center-left-->
 
-<?php include('includes/footer.php'); ?>
+<?php  require_once('includes/footer.php'); ?>
