@@ -1,22 +1,43 @@
 <?php
-	
+
+include('classes/DB.class.php');
 	class Login extends DB{
 		
 		private $tabela = 'usuarios';
 		private $prefix = 'sersocial_';
 		private $cookie = true;
 		public $erro = '';
+		private $senha;
+    private $usuario;
+    private $lembrar=false;
 		
-		private function crip($senha){
+    
+    public function setSenha($senhaAluno){
+      $this->senha = $senhaAluno;
+    }
+    
+    public function setUsuario($emailUsuario){
+      $this->usuario = $emailUsuario;
+    }
+    
+    public function setLembrar($lembrarUsu){
+      $this->lembrar = $lembrarUsu;
+    }
+    
+    private function crip($senha){
 			return sha1($senha);
 		}
 		
-		private function validar($usuario,$senha){
-			$senha = $this->crip($senha);
+		private function validar(){
+      $senhaUsu = $this->crip($this->senha);
 			
 			try{
-			$validar = self::getConn()->prepare('SELECT `id` FROM `'.$this->tabela.'` WHERE `email`=? AND `senha`=? LIMIT 1');
-			$validar->execute(array($usuario,$senha));
+      
+    
+			
+      $validar = $this->getConn()->prepare('SELECT `id` FROM `'.$this->tabela.'` WHERE `email`=? AND `senha`=? LIMIT 1');
+			
+      $validar->execute(array($this->usuario,$senhaUsu));
 			
 			if($validar->rowCount()==1){
 				$asValidar = $validar->fetch(PDO::FETCH_COLUMN);
@@ -34,24 +55,25 @@
 			}
 		}
 		
-		function logar($usuario,$senha,$lembrar=false){
-			if($this->validar($usuario,$senha)){
-				
+		public function logar(){
+     
+			if($this->validar()){
 				if(!$_SESSION){
-					session_start();
+        	session_start();
 				}
 				
-				$_SESSION[$this->prefix.'usuario'] = $usuario;
+				$_SESSION[$this->prefix.'usuario'] = $this->usuario;
+        
 				$_SESSION[$this->prefix.'logado'] = true;
 				
 				if($this->cookie){
-					$valor = join('#',array($usuario,$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT']));
+					$valor = join('#',array($this->usuario,$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT']));
 					$valor = sha1($valor);
 					setcookie($this->prefix.'token',$valor,0,'/');
 				}
 				
-				if($lembrar){
-					$this->lembrardados($usuario,$senha);
+				if(isset($lembrar)){
+					$this->lembrardados($this->usuario,$this->senha);
 				}
 				return true;
 			}else{
@@ -61,14 +83,19 @@
 		}
 		
 		function logado($cookei=true){
-			if(!$_SESSION){
-				session_start();
+			if(!isset($_SESSION)){
+				
+        session_start();
+        
 			}
 			
-			if(!isset($_SESSION[$this->prefix.'logado']) AND !$_SESSION[$this->prefix.'logado']){
+			if(!isset($_SESSION[$this->prefix.'logado']) AND !isset($_SESSION[$this->prefix.'logado'])){
+      
 				if($cookei){
+      
 					return $this->dadosLembrados();
 				}else{
+      
 					$this->erro = 'Você não esta logado';
 					return false;
 				}
@@ -114,7 +141,8 @@
 		
 		function getDados($uid){
 			if($this->logado()){
-				$dados = self::getConn()->prepare('SELECT * FROM `'.$this->tabela.'` WHERE `id`=?');
+      
+				$dados = $this->getConn()->prepare('SELECT * FROM `'.$this->tabela.'` WHERE `id`=?');
 				$dados->execute(array($uid));
 				return $dados->fetch(PDO::FETCH_ASSOC);
 			}
@@ -137,7 +165,7 @@
 				$usuario = base64_decode(substr($_COOKIE[$this->prefix.'login_user'],1));
 				$senha = base64_decode(substr($_COOKIE[$this->prefix.'login_pass'],1));
 				
-				return $this->logar($usuario,$senha,true);
+				return $this->logar();
 			}
 			return false;
 		}
