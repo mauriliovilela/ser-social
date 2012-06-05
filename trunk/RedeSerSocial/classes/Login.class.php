@@ -40,7 +40,8 @@
       $validar->execute(array($this->usuario,$senhaUsu));
 			
 			if($validar->rowCount()==1){
-				$asValidar = $validar->fetch(PDO::FETCH_COLUMN);
+         $asValidar = $validar->fetch(PDO::FETCH_NUM);
+         //$asValidar = $validar->fetch(PDO::FETCH_COLUMN);
 				$_SESSION[$this->prefix.'uid'] = $asValidar[0];
 				return true;
 			}else{
