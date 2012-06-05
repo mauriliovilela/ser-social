@@ -1,7 +1,6 @@
 <div class="blocos" id="meus-amigos">
 
     <?php
-      require_once('classes/DB.class.php');
     $selAmigos = DB::getConn()->prepare('SELECT u.id, u.nome, u.sobrenome, u.imagem FROM usuarios u 
 									INNER JOIN amizade a ON (((u.id=a.de) AND (a.para=?)) OR ((u.id=a.para) AND (a.de=?))) AND a.status=1');
 
@@ -17,9 +16,8 @@
 
             while ($resAmigos = $selAmigos->fetch(PDO::FETCH_NUM)) {
 
-                $imagemamigo = (file_exists('/uploads/usuarios/' . $resAmigos[3])) ? $resAmigos[3] : 'default.png';
-
-                echo '<li><a href="perfil.php?uid=' . $resAmigos[0] . '"><img src="uploads/usuarios/' . $imagemamigo . '" alt="" title="' . $resAmigos[1] . ' ' . $resAmigos[2] . '" /></a></li>';
+               
+                echo '<li><a href="perfil.php?uid=' . $resAmigos[0] . '"><img width="50" height="50" src="uploads/usuarios/' . user_img($resAmigos[3]). '" alt="" title="' . $resAmigos[1] . ' ' . $resAmigos[2] . '" /></a></li>';
             }
         } else {
             echo 'Você não tem amigos';
@@ -27,3 +25,4 @@
         ?>
     </ul>
 </div><!--blocos-->
+<img width="" height="" src="uploads/usuarios/">
