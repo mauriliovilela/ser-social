@@ -1,21 +1,28 @@
-==UC017 – Excluir Recado Privado==
+==UC033 – Alterar Dados de Acesso==
 
-Este caso de uso é responsável pela a ação do ator usuário excluir um recado privado enviado.
+Este caso de uso é responsável por permitir o ator efetuar a alteração dos seus dados de acesso.
 
-*Ator:* Usuário.<br>
+*Ator:* Usuário.
 
-*Prioridade:* Desejável<br>
+*Prioridade:* Importante
 
-*Requisitos Funcionais Associados:* [RF004] Gerenciar Recados do Usuário.<br>
+*Requisitos Funcionais Associados:* [RF002] Gerenciar Acesso do Usuário.<br>
 *Requisitos Não Funcionais Associados:* Disponibilidade, tempo de acesso, segurança do sistema, interface gráfica.<br>
-*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login).<br>
-*Pós-condição:* O ator excluir um recado privado.<br>
+*Pré-condição:* O ator deve estar conectado ao sistema (ter efetuado o login) e deve estar na página de álbuns.<br>
+*Pós-condição:* O ator deve ter alterado os dados no sistema.
 
-*Fluxo de eventos principal*<br>
+*Fluxo de eventos principal*
 
- # O ator seleciona a opção de visualizar recados privados.<br>
- # O sistema retorna a página contendo os recados privados.<br>
- # O ator seleciona o recado privado que deseja excluir.<br>
- # O sistema exibe notificação de confirmação da exclusão.<br>
- # O sistema executa a ação e atualiza a página de recados privados<br>
+ # O ator acessa a página de edição de página pessoal.<br>
+ # O sistema retorna a página contendo o formulário de edição de página pessoal.<br>
+ # O ator seleciona a opção de alteração de dados de acesso.<br>
+ # O sistema retorna a página contendo o formulário de edição de dados de acesso.<br>
+ # O ator preenche o formulário e submete os dados.<br>
+ # O sistema executa a ação, exibe notificação de sucesso e retorna a página pessoal do usuário.<br>
  # O caso de uso é encerrado.
+
+*Fluxos de exceções*
+
+*Fluxo de Exceção [FE029-1] – Dados Incorretos*<br>
+ # O sistema informa a MSG “Dados Incorretos”.<br>
+ # Volta para o passo 2 do fluxo principal.
