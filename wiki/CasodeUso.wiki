@@ -17,7 +17,7 @@
  * *[UC014] – Responder Recado Privado*
  * *[UC015] – Visualizar Recado Privado*
  * *[UC016] – Excluir Recado Privado*
- * *[UC017] – Excluir Recado Privado*
+ * *[UC017] – Alterar Dados de Acesso*
  * *[UC018] – Visualizar Foto*
  * *[UC019] – Adicionar Foto*
  * *[UC020] – Editar Foto*
@@ -33,4 +33,3 @@
  * *[UC030] – Visualizar Amigos*
  * *[UC031] – Excluir Amigo*
  * *[UC032] – Efetuar Logoff*
- * *[UC033] – Alterar Dados de Acesso*
