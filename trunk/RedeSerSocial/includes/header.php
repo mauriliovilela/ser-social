@@ -1,6 +1,7 @@
 <?php
 include('classes/DB.class.php');
 include('classes/Login.class.php');
+include ('classes/Amizade.class.php');
 
 $objLogin = new Login;
 
@@ -37,9 +38,9 @@ if (is_null($dados)) {
 function user_img($img) {
     return ($img <> '' AND file_exists('uploads/usuarios/' . $img)) ? $img : 'default.png';
 }
- 
+
 $user_imagem = user_img($user_imagem);
-//$user_fullname = $user_nome . ' ' . $user_sobrenome;
+$user_fullname = $user_nome . ' ' . $user_sobrenome;
 ?>
 
 <!DOCTYPE HTML>
