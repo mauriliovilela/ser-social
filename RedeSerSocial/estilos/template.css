@@ -43,7 +43,11 @@ div#content{ overflow:hidden;}
 	div.blocos{ width:100%; min-height:50px; margin-bottom:1em; clear:both; background:#fff;}
 	
 	div#content .blocos{ width:auto;}
-	
+        
+        div#recadoinput{padding: 5px;font-size: 12px Arial, Helvetica, sans-serif;border: 1px solid;}
+        div#contentformrecado {display: none;}
+        div#contentformrecado textarea{padding: 5px; font: 12px Arial, Helvetica, sans-serif; border: 1px solid #ccc; width: 97.5% ; min-height: 80px;}
+
 	div#pagina{ padding:0.5em; width:auto;}
 	
 	div#foto-perfil{ overflow:hidden;}
