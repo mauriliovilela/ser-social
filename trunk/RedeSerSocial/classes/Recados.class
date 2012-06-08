@@ -1,0 +1,10 @@
+<?php
+
+class recados extends DB {
+
+    static function setRecado($de, $para, $recado) {
+        $inserir = self::getConn()->prepare('INSERT INTO `recados` SET `de`=?, `para`=?, `recado`=?, `data`=NOW()');
+        return ($inserir->execute(array($de, $para, $recado))) ? true : false;
+    }
+
+}

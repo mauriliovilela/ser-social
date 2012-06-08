@@ -15,6 +15,49 @@ class Amizade extends DB {
         return $d;
     }
 
+    static function solicitacao($idDaSessao, $idExtrangeiro) {
+        $sql = self::getConn()->prepare('SELECT * FROM `amizade` WHERE (de=? AND para=?) OR (para=? AND de=?) LIMIT 1');
+        $sql->execute(array($idDaSessao, $idExtrangeiro, $idDaSessao, $idExtrangeiro));
+
+        if ($sql->rowCount() == 0) {
+            $d['r'] = 0;
+        } else {
+            $st = $sql->fetch(PDO::FETCH_ASSOC);
+            $d['id'] = $st['id'];
+
+            if ($st['status'] == 0) {
+                $d['r'] = 1;
+            } else {
+                $d['r'] = 2;
+            }
+        }
+        return $d;
+    }
+
+    static function setAmigo($de, $para) {
+
+        $sql = self::getConn()->prepare('SELECT * FROM `amizade` WHERE (de=? AND para=?) OR (para=? AND de=?) LIMIT 1');
+        $sql->execute(array($de, $para, $$de, $para));
+
+        if ($sql->rowcount() == 0) {
+
+            $convite = self::getConn()->prepare('INSERT INTO `amizade` SET `de`=?, `para`=?');
+
+            return $convite->execute(array($de, $para));
+        }
+    }
+
+    static function delAmigo($id) {
+
+        $del = DB::getConn()->prepare('DELETE FROM `amizade` WHERE `id`=?');
+        return $del->execute(array($id));
+    }
+
+    static function aceitarAmigo($id) {
+        $convite = self::getConn()->prepare('UPDATE `amizade` SET `status`=1 WHERE `id`=?');
+        return $convite->execute(array($id));
+    }
+
 }
 
-?>
+

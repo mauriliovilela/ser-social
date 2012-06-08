@@ -1,0 +1,2 @@
+erro: CAUGHT EXCEPTION no arquivo: /var/www/RedeSerSocial/classes/DB.class.php ( linha 6 ) :: IP(127.0.0.1) data:06/06/12 14:12:20
+erro: CAUGHT EXCEPTION no arquivo: /var/www/RedeSerSocial/classes/DB.class.php ( linha 6 ) :: IP(127.0.0.1) data:06/06/12 14:12:32
