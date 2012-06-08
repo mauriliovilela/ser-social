@@ -1,32 +1,28 @@
-<?php  require_once('includes/header.php'); 
-      
-?>        
+<?php include('includes/header.php'); ?>        
 <div id="amarra-center-left">
 
     <div class="center">
 
         <div class="blocos" id="deixar-recados">
-            <h1><?php echo $user_nome . ' ' . $user_sobrenome ?>
+            <h2><?php echo ($idDaSessao <> $idExtrangeiro) ? $user_fullname : 'Meu perfil'; ?>
                 <span>
-                    <?php                      require_once('classes/DB.class.php');
+                    <?php
                     if ($idDaSessao <> $idExtrangeiro) {
-                        $e_meu_amigo = DB::getConn()->prepare('SELECT * FROM `amizade` WHERE (de=? AND para=?) OR (para=? AND de=?) LIMIT 1');
-                        $e_meu_amigo->execute(array($idDaSessao, $idExtrangeiro, $idDaSessao, $idExtrangeiro));
 
-                        if ($e_meu_amigo->rowCount() == 0) {
-                            echo '<a href="php/amizade.php?ac=convite&de=' . $idDaSessao . '&para=' . $idExtrangeiro . '">adicionar amigo</a>';
-                        } else {
-                            $asstatusamizade = $e_meu_amigo->fetch(PDO::FETCH_ASSOC);
-                            if ($asstatusamizade['status'] == 0) {
-                                echo '<a href="php/amizade.php?ac=remover&id=' . $asstatusamizade['id'] . '&de=' . $idDaSessao . '&para=' . $idExtrangeiro . '">cancelar pedido</a>';
-                            } else {
-                                echo '<a href="php/amizade.php?ac=remover&id=' . $asstatusamizade['id'] . '&de=' . $idDaSessao . '&para=' . $idExtrangeiro . '">remover amigo</a>';
-                            }
+                        $solicitacao = Amizade::solicitacao($idDaSessao, $idExtrangeiro);
+                        $link = '<a href="php/amizade.php?ac=';
+                        if ($solicitacao['r'] == 0) {
+
+                            echo $link . 'convite|' . $idDaSessao . '|' . $idExtrangeiro . '">Adicionar amigo</a>';
+                        } elseif ($solicitacao['r'] == 1) {
+                            echo $link . 'remover|' . $idDaSessao . '|' . $idExtrangeiro . '|' . $solicitacao['id'] . '">Cancelar pedido</a>';
+                        } elseif ($solicitacao['r'] == 2) {
+                            echo $link . 'remover|' . $idDaSessao . '|' . $idExtrangeiro . '|' . $solicitacao['id'] . '">Remover amigo</a>';
                         }
                     }
                     ?>
 
-                </span></h1>
+                </span></h2>
 
 
         </div><!--blocos-->
@@ -35,7 +31,6 @@
             <h2>perfil</h2>
 
             <?php
-            
             if (isset($_GET['perfil']) AND $_GET['perfil'] == 'UPLOAD') {
                 ?>
                 <form name="upload-foto-perfil" enctype="multipart/form-data" method="post" action="php/crop.php">
@@ -55,15 +50,11 @@
 
     <div class="right">
 
-        <<div class="blocos" id="publicidade">
-            <iframe width="300" height="250" src="http://www.youtube.com/embed/mx2ZOdKSd90" frameborder="0" allowfullscreen></iframe>
-        </div><!--blocos-->
-
-        <?php  require_once('includes/amigos.php'); ?>
+        <?php include('includes/amigos.php'); ?>
 
     </div><!--right-->
 
 
 </div><!--amarra-center-left-->
 
-<?php  require_once('includes/footer.php'); ?>
+<?php include('includes/footer.php'); ?>
