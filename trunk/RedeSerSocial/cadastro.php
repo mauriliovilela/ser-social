@@ -57,9 +57,9 @@
                                     } elseif ($senha == '' OR strlen($senha) < 4) {
                                         echo 'Digite sua senha, ela tem de ter mais de 4 caracteres';
                                     }
-                                    //elseif(strtolower($captcha) <> strtolower($_SESSION['captchaCadastro'])){
-                                    //echo 'O código digitado no captcha não corresponde com a imagem';
-                                    //}
+//elseif(strtolower($captcha) <> strtolower($_SESSION['captchaCadastro'])){
+//echo 'O código digitado no captcha não corresponde com a imagem';
+//}
                                     else {
                                         $senhaInsert = sha1($senha);
                                         $nascimento = "$ano-$mes-$dia";
@@ -67,13 +67,11 @@
                                         $inserir = DB::getConn()->prepare("INSERT INTO `usuarios` SET `email`=?, `senha`=?, `nome`=?, `matricula`=?,`sobrenome`=?, `sexo`=?, `nascimento`=?, `cadastro`=NOW()");
 
                                         if ($inserir->execute(array($email, $senhaInsert, $nome, $matricula, $sobrenome, $sexo, $nascimento))) {
-                                       
-                                            echo "<script>alert('Seu cadastro foi realizado com sucesso!');document.location='login.php'</script>";
-						
-                                        }else{
+                                            echo "<script>alert('Seu cadastro foi realizado com sucesso!');document.location='./'</script>";
+                                        } else {
 
-						                                echo "<script>alert('Erro ao gravar registro!');history.back()</script>";
-				                            }
+                                            echo "<script>alert('Erro ao gravar registro!');history.back()</script>";
+                                        }
                                     }
                                 }
                             } catch (PDOException $e) {
@@ -102,22 +100,15 @@
                             </div>
 
                         </div>
-                        
+
 
                         <span class="spanHide">Eu sou</span>
                         <select name="sexo">
-                            <option <?php if (isset($sexo)){
-                                                if ($sexo == 'homem'){ 
-                                                    echo 'selected="selected"'; }}?> value="homem">Homem&nbsp;</option>
-                            <option <?php if (isset($sexo)){ 
-                                             if($sexo == 'mulher'){ 
-                                                  echo 'selected="selected"'; }}?>value="mulher">Mulher&nbsp;</option>
-                            <option <?php if (isset($sexo)){ 
-                                             if($sexo=='travesti'){ echo 'selected="selected"'; }}?>value="travesti">Travesti&nbsp;</option>
-                            <option <?php if (isset($sexo)){ 
-                                            if($sexo== 'viado'){ echo 'selected="selected"'; }}?>value="viado">Viado&nbsp;</option>
-                            <option <?php if (isset($sexo)){ 
-                                              if ($sexo == 'sapatao'){ echo 'selected="selected"'; }}?>value="sapatao">Sapatão&nbsp;</option>
+                            <option <?php if ($sexo == 'homem') echo 'selected="selected"'; ?> value="homem">Homem&nbsp;</option>
+                            <option <?php if ($sexo == 'mulher') echo 'selected="selected"'; ?>value="mulher">Mulher&nbsp;</option>
+                            <option <?php if ($sexo == 'travesti') echo 'selected="selected"'; ?>value="travesti">Travesti&nbsp;</option>
+                            <option <?php if ($sexo == 'viado') echo 'selected="selected"'; ?>value="viado">Viado&nbsp;</option>
+                            <option <?php if ($sexo == 'sapatao') echo 'selected="selected"'; ?>value="sapatao">Sapatão&nbsp;</option>
                         </select>
 
                         <span class="spanHide">Data de nascimento</span>
@@ -170,25 +161,25 @@
                         </select>
 
                         <span class="spanHide">E-mail</span>
-                        <input type="text" name="email" class="inputTxt" value="<?php if (isset($email)) {echo $email; } ?>"/>
+                        <input type="text" name="email" class="inputTxt" value="<?php echo $email; ?>"/>
 
                         <span class="spanHide">Senha</span>
-                        <input type="password" name="senha" class="inputTxt" value="<?php if (isset($senha)) {echo $senha ;} ; ?>"/>
+                        <input type="password" name="senha" class="inputTxt" value="<?php echo $senha; ?>"/>
 
-                                <!-- <span class="spanHide">Verificação contra fraudes</span>
-                                <div>
-                                <div class="captchaFloat"><img src="captcha/captcha.php" width="200" height="60" alt="Captcha">
-                                </div>
+<!-- <span class="spanHide">Verificação contra fraudes</span>
+<div>
+<div class="captchaFloat"><img src="captcha/captcha.php" width="200" height="60" alt="Captcha">
+</div>
 
-                                <div class="inputFloat">
-                                <span>Digite os caracteres</span>
-                                <input type="text" name="captcha" class="inputTxt"/>
-                                        </div>
-                                        </div>-->
+<div class="inputFloat">
+<span>Digite os caracteres</span>
+<input type="text" name="captcha" class="inputTxt"/>
+</div>
+</div>-->
                         <span>&nbsp;</span>
                         <input type="submit" value="" class="submitCadastro" name="Cadastrar"/>
                         <span class="campos">* Campos obrigatórios</span><br/><br/>
-                        
+
                     </form>
                 </div><!-- Fim do Formulário-->
 
