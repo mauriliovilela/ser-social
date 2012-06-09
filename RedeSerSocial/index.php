@@ -13,6 +13,7 @@
             $dadosamizade = DB::getConn()->prepare('SELECT `nome`,`sobrenome` FROM `usuarios` WHERE `id`=? LIMIT 1');
 
             if ($solicitacoes->rowcount() > 0) {
+                echo '<div id="busca">';
                 $link = '<a href="php/amizade.php?ac=';
                 echo '<ul>';
                 while ($resmeuamigo = $solicitacoes->fetch(PDO::FETCH_ASSOC)) {
@@ -20,11 +21,16 @@
                     $dadosamizade->execute(array($resmeuamigo['de']));
                     $asdadosamizade = $dadosamizade->fetch(PDO::FETCH_ASSOC);
 
-                    echo '<li>' . $asdadosamizade['nome'] . ' ' . $asdadosamizade['sobrenome'] . ' quer ser seu amigo ' .
-                    $link . 'aceitar|' . $resmeuamigo['id'] . '">aceitar</a> ' .
-                    $link . 'remover|' . $resmeuamigo['de'] . '|' . $idDaSessao . '|' . $resmeuamigo['id'] . '">recusar</a></li>';
+                    
+                echo '<li><span><img src="uploads/usuarios/'.user_img($asdadsoamizade['imagem']).'" /></span>
+  								<h2><a href="perfil.php?uid='.$asdadsoamizade['id'].'">'.$asdadsoamizade['nome'].' '.$asdadsoamizade['sobrenome'].
+                  ' </a></h2> Olá '.$asdadsoamizade['nome'].' quer ser seu amigo '.
+  							$link.'aceitar|'.$resmeuamigo['id'].'">aceitar</a> '.
+  							$link.'remover|'.$resmeuamigo['de'].'|'.$idDaSessao.'|'.$resmeuamigo['id'].'">recusar</a></li>'; 
+  						
                 }
                 echo '</ul>';
+                echo '</div>';
             }
             ?>
 
